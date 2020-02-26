@@ -3,8 +3,8 @@ import React from "react";
 const App = () => {
   return (
     <div>
-      <h1>ARE YOU CHORE!</h1>
-      <p>Im not!</p>
+      <h1>Coz i´m a steampunker yes i am!</h1>
+      <p>really?</p>
     </div>
   );
 };
