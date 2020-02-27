@@ -1,11 +1,18 @@
-import React from "react";
+import React, { CSSProperties } from 'react';
 
-const Header = () => {
+
+function Header() {
   return (
-    <div>
-      <h1>Header</h1>
+    <div style={header}>
+ 
     </div>
   );
 };
 
 export default Header;
+
+const header: CSSProperties = {
+    width: '100%',
+    height: '15rem',
+    background: 'pink',
+}
