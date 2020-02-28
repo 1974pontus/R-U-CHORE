@@ -15,6 +15,7 @@ export default Title;
 
 
 const title: CSSProperties = {
-textAlign: 'center'
+textAlign: 'center',
+width: '100%'
 }
 
