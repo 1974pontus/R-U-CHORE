@@ -1,6 +1,7 @@
 import React from "react";
-import ProfileImg from './ViewContainer/ProfileImg'
-import Header from './Header'
+import ProfileImg from './ViewContainer/ProfileImg';
+import Header from './Header';
+import Title from './ViewContainer/Title';
 
 // interface Profile {
 //     img: string
@@ -14,6 +15,7 @@ const Layout = () => {
       <div>
            <ProfileImg />
         <Header />
+        <Title />
         <h1>Coz i´m a steampunker yes i am!</h1>
         <p>really?</p>
       </div>
