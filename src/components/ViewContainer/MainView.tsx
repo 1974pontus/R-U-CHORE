@@ -4,7 +4,7 @@ import Title from './Title'
 const MainView = () => {
 return (
     <div>
-        <Title>Först svara på frågorna:</Title>
+       
     </div>
 )
 }
