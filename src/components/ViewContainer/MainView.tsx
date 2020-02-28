@@ -1,9 +1,10 @@
 import React from 'react'
+import Title from './Title'
 
 const MainView = () => {
 return (
     <div>
-        MainView
+        <Title>Först svara på frågorna:</Title>
     </div>
 )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
+import Title from './Title'
 
 const ProfileView = () => {
 return (
     <div>
-        ProfileView
-    </div>
+        <Title>Att göra idag:</Title>
+    </div> 
 )
 }
 

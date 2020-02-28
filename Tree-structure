@@ -17,11 +17,11 @@
                 <radiobutton> 
 
         <ProfileView>
-            <Todolist>
+            <Todo>
+                <TodoList>
                 <TodoItem>
-                <p>
-                <checkbox>
-
+                <TodoForm>
+               
         <Footer>
             <Input>
             <Submit> 
