@@ -7,7 +7,7 @@ type Props = React.PropsWithChildren<{
 
 const SubmitButton = (props: Props) => {
   return (
-    <button style={mainButton}>{props.children}</button>
+    <button value="" style={mainButton}> {props.children} </button>
   );
 };
 
@@ -18,12 +18,13 @@ const mainButton: CSSProperties = {
   display: 'flex',
   alignItems: 'end',
   justifyContent: 'end',
-  padding: '0.5em',
-  background: 'green',
+  textAlign: 'center',
+  padding: '0.3rem 0 0.3rem 1rem',
+  background: 'black',
   color: 'white',
-  fontSize: '1rem',
+  fontSize: '0.7rem',
   width:'4rem',
-  height:'4rem',
-  borderRadius: '50%',
+  height:'3rem',
+  outline: '0',
   cursor: 'pointer',
 }
