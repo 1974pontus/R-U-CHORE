@@ -3,7 +3,7 @@ import React from "react";
 const QuestionForm = () => {
   return (
     <div>
-      <h1>Form</h1>
+      <h1>3 st frågor med radiobuttons till varje fråga</h1>
     </div>
   );
 };
