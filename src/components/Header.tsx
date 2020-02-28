@@ -14,6 +14,6 @@ export default Header;
 
 const header: CSSProperties = {
     width: '100%',
-    height: '13em',
+    height: '15rem',
     background: 'pink',
 }
