@@ -2,6 +2,12 @@ import React from "react";
 import ProfileImg from './ProfileImg'
 import Header from './Header'
 
+interface Profile {
+    img: string
+    name: string
+    todos: string[]
+}
+
 const Layout = () => {
     return (
    

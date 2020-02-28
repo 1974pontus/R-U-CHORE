@@ -1,10 +1,13 @@
 import React from "react";
 
-const SubmitButton = () => {
+
+type Props = React.PropsWithChildren<{
+  
+}>
+
+const SubmitButton = (props: Props) => {
   return (
-    <div>
-      <button>Done, Add New Todo, </button>
-    </div>
+    <button>{props.children}</button>
   );
 };
 

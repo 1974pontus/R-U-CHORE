@@ -1,10 +1,12 @@
 import React from "react";
+import SubmitButton from "./SubmitButton";
 
 const QuestionForm = () => {
   return (
-    <div>
+    <form>
       <h1>3 st frågor med radiobuttons till varje fråga</h1>
-    </div>
+      <SubmitButton>Done</SubmitButton>
+    </form>
   );
 };
 
