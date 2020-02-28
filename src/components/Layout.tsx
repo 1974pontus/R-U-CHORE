@@ -1,12 +1,12 @@
 import React from "react";
-import ProfileImg from './ProfileImg'
+import ProfileImg from './ViewContainer/ProfileImg'
 import Header from './Header'
 
-interface Profile {
-    img: string
-    name: string
-    todos: string[]
-}
+// interface Profile {
+//     img: string
+//     name: string
+//     todos: string[]
+// }
 
 const Layout = () => {
     return (
