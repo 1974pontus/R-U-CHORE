@@ -1,11 +1,21 @@
-import React from "react";
+import React from 'react';
+import {CSSProperties} from 'react'
 
-const Title = () => {
+type Props = React.PropsWithChildren<{
+  
+}>
+
+const Title = (props: Props) => {
   return (
-    <div>
-      <h3>Title: Svara på frågorna, Detta ska du göra idag </h3>
-    </div>
+  <h3 style={title}>{props.children}</h3>
   );
 };
 
 export default Title;
+
+
+const title: CSSProperties = {
+textAlign: 'center',
+width: '100%'
+}
+
