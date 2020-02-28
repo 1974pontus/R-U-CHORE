@@ -7,7 +7,9 @@ function ProfileImg(){
   return (
     <div>
       <img src={imageSrc} style={profile} alt="Leo DiCaprio in romeo and juliet" />
+      <h3>Hello im Leo</h3>
     </div>
+    
   );
 };
 
