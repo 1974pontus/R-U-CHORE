@@ -1,9 +1,10 @@
 import React from 'react'
+import TodoList from './TodoList'
 
 const ProfileView = () => {
 return (
     <div>
-        ProfileView
+       <TodoList />
     </div>
 )
 }

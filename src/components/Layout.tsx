@@ -1,6 +1,6 @@
 import React from "react";
-import ProfileImg from './ViewContainer/ProfileImg'
-import Header from './Header'
+import ProfileImg from "./ViewContainer/ProfileImg";
+import Header from "./Header";
 
 // interface Profile {
 //     img: string
@@ -9,15 +9,13 @@ import Header from './Header'
 // }
 
 const Layout = () => {
-    return (
-   
-      <div>
-           <ProfileImg />
-        <Header />
-        <h1>Coz i´m a steampunker yes i am!</h1>
-        <p>really?</p>
-      </div>
-    );
-  };
-  
-  export default Layout;
+  return (
+    <div>
+      <ProfileImg />
+      <Header />
+      <Header />
+    </div>
+  );
+};
+
+export default Layout;
