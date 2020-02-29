@@ -14,7 +14,7 @@ export interface TodoInterface {
     handleTodoUpdate: (event: React.ChangeEvent<HTMLInputElement>, id: string) => void;
     handleTodoRemove: (id: string) => void;
     handleTodoComplete: (id: string) => void;
-    handleTodoBlur: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    todo: TodoInterface;
     todos: TodoInterface[]
   }
   // Todo item interface
@@ -22,6 +22,5 @@ export interface TodoInterface {
     handleTodoUpdate: (event: React.ChangeEvent<HTMLInputElement>, id: string) => void;
     handleTodoRemove: (id: string) => void;
     handleTodoComplete: (id: string) => void;
-    handleTodoBlur: (event: React.ChangeEvent<HTMLInputElement>) => void;
     todo: TodoInterface;
   }
