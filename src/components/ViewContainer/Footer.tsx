@@ -1,13 +1,15 @@
 import React, { CSSProperties } from 'react';
-import SubmitButton from './SubmitButton'
+import SubmitButton from './SubmitButton';
 
+interface Props {
+  placeholder?: string;
+}
 
-
-function Footer() {
+function Footer(props: Props) {
 return (
     <footer style={footerContainer}>
-        <input style={inputFelt} type="text" id="name" name="name" placeholder="Type your name"/>
-        <SubmitButton>Done</SubmitButton> 
+        <input style={inputFelt} type="text" id="name" name="name" placeholder={props.placeholder} /> 
+        <SubmitButton></SubmitButton> 
         {/* prop */}
     </footer>
 )
@@ -25,9 +27,11 @@ const footerContainer: CSSProperties = {
     marginBottom: '0.4rem'
   }
 
-  const inputFelt: CSSProperties = {
-    padding: '1rem',
-    outline: '0',
-    color: 'blue'
-  }
+
+const inputFelt: CSSProperties = {
+  padding: '1rem',
+  outline: '0',
+  color: 'blue'
+}
+
 

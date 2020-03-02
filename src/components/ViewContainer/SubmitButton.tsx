@@ -1,13 +1,12 @@
 import React, { CSSProperties } from 'react';
 
-
-type Props = React.PropsWithChildren<{
-  
-}>
+interface Props {
+  buttontext?: string;
+}
 
 const SubmitButton = (props: Props) => {
   return (
-    <button value="" style={mainButton}> {props.children} </button>
+    <button value="" style={mainButton}> {props.buttontext} </button>
   );
 };
 

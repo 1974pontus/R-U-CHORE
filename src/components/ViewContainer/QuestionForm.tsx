@@ -1,5 +1,6 @@
 import React from "react";
 import {CSSProperties} from 'react'
+import SubmitButton from "./SubmitButton";
 
 /* interface QuestionForm {
   htmlFor: string;
@@ -30,6 +31,7 @@ const QuestionForm = () => {
       <input type="radio" id="Q3No" name="Q3" value="No" />
       <label htmlFor="Q3">Nej</label>
       <br />
+  <SubmitButton buttontext="klar"></SubmitButton> 
 </form>
 
   
