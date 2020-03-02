@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
+import QuestionForm from "./QuestionForm";
 
 
 const MainView = () => {
 return (
-    <div>
-       
-    </div>
+    <QuestionForm />
 )
 }
 

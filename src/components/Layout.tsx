@@ -2,9 +2,13 @@ import React from "react";
 
 // import ProfileImg from './ViewContainer/ProfileImg'
 import Header from './Header'
-import Footer from "./ViewContainer/Footer";
 import Title from './ViewContainer/Title';
+import MainView from "./ViewContainer/MainView";
 import ProfileView from "./ViewContainer/ProfileView";
+
+//tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
+/* import Footer from "./ViewContainer/Footer";
+<Footer buttontext="klar" inputplaceholder="hej"></Footer>  */
 
 
 // interface Profile {
@@ -23,9 +27,9 @@ const Layout = () => {
         /> */}
         <Header />
         <Title />
+        <MainView />
         <ProfileView/>
-        <Footer />
-
+         
       </div>
     );
   };
