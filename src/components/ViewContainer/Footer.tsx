@@ -1,21 +1,21 @@
 import React, { CSSProperties } from 'react';
-import SubmitButton from './SubmitButton';
 
 interface Props {
-  placeholder?: string;
+  inputplaceholder: string;
+  buttontext: string;
 }
+
 
 function Footer(props: Props) {
 return (
     <footer style={footerContainer}>
-        <input style={inputFelt} type="text" id="name" name="name" placeholder={props.placeholder} /> 
-        <SubmitButton></SubmitButton> 
+        <input style={inputFelt} type="text" id="name" name="name" placeholder={props.inputplaceholder} /> 
+        <button value="" style={mainButton}> {props.buttontext} </button> 
         {/* prop */}
     </footer>
 )
 }
 
-export default Footer
 
 const footerContainer: CSSProperties = {
     display: 'flex',
@@ -35,3 +35,20 @@ const inputFelt: CSSProperties = {
 }
 
 
+const mainButton: CSSProperties = {
+  display: 'flex',
+  alignItems: 'end',
+  justifyContent: 'end',
+  textAlign: 'center',
+  padding: '0.3rem 0 0.3rem 1rem',
+  background: 'black',
+  color: 'white',
+  fontSize: '0.7rem',
+  width:'4rem',
+  height:'3rem',
+  outline: '0',
+  cursor: 'pointer',
+}
+
+
+export default Footer
