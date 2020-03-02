@@ -1,17 +1,26 @@
 import React, { CSSProperties } from "react";
-import imageSrc from '../img/leo.jpg'
+// import imageSrc from '../img/leo.jpg'
 
-function ProfileImg(){
+interface Props {
+  profileImage: string,
+  alt: string
+}
 
-  
-  return (
-    <div>
-      <img src={imageSrc} style={profile} alt="Leo DiCaprio in romeo and juliet" />
-     
-    </div>
+
+const ProfileImg = (props: Props) => (
+
     
-  );
-};
+//   return (
+//     <div>
+//       <img src={imageSrc} style={profile} alt="Leo DiCaprio in romeo and juliet" />
+     
+//     </div>
+    
+//   );
+// };
+
+
+<img src={props.profileImage} style={profile} alt={props.alt} />);
 
 export default ProfileImg;
 
