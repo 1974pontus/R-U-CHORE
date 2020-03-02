@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from 'react';
 
 
 type Props = React.PropsWithChildren<{
@@ -7,8 +7,24 @@ type Props = React.PropsWithChildren<{
 
 const SubmitButton = (props: Props) => {
   return (
-    <button>{props.children}</button>
+    <button value="" style={mainButton}> {props.children} </button>
   );
 };
 
 export default SubmitButton;
+
+
+const mainButton: CSSProperties = {
+  display: 'flex',
+  alignItems: 'end',
+  justifyContent: 'end',
+  textAlign: 'center',
+  padding: '0.3rem 0 0.3rem 1rem',
+  background: 'black',
+  color: 'white',
+  fontSize: '0.7rem',
+  width:'4rem',
+  height:'3rem',
+  outline: '0',
+  cursor: 'pointer',
+}
