@@ -9,7 +9,7 @@ interface TodoListItemProps {
 
 const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo }) => {
   return (
-    <li>
+    <li style={{ listStyleType: "none" }}>
       <label className={todo.complete ? "complete" : undefined}>
         <input
           type="checkbox"

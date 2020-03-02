@@ -11,9 +11,10 @@ const Layout = () => {
       <ProfileImg />
       <Header />
       <Title />
-      <ProfileView />
+      <ProfileView/>
     </div>
   );
 };
+
 
 export default Layout;

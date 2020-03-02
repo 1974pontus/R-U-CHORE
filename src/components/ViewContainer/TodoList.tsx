@@ -1,5 +1,6 @@
 import React from "react";
 import TodoListItem from "./TodoListItem";
+import "./TodoListItem.css";
 import { Todo, ToggleTodo } from "./types";
 
 interface TodoListProps {
@@ -18,5 +19,6 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
     </ul>
   );
 };
+
 
 export default TodoList
