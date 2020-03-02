@@ -5,7 +5,7 @@ import Header from './Header'
 import Footer from "./ViewContainer/Footer";
 import Title from './ViewContainer/Title';
 import ProfileView from "./ViewContainer/ProfileView";
-
+import MainView from "./ViewContainer/MainView";
 // interface Profile {
 //     img: string
 //     name: string
@@ -19,6 +19,7 @@ const Layout = () => {
         <ProfileImg />
         <Header />
         <Title />
+        <MainView />
          <ProfileView/>
         <Footer />
 
