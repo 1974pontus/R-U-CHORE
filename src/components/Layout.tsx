@@ -43,5 +43,7 @@ export default Layout
 
 
 const marginbottom: CSSProperties = {
-  marginBottom: '10rem'
+  marginBottom: '7rem',
+  textAlign: 'center',
+  color: 'white'
 }
