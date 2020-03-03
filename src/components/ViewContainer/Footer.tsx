@@ -10,7 +10,7 @@ function Footer(props: Props) {
 return (
     <footer style={footerContainer}>
         <input style={inputFelt} type="text" id="name" name="name" placeholder={props.inputplaceholder} /> 
-        <button value="" style={mainButton}> {props.buttontext} </button> 
+        <button style={mainButton}>{props.buttontext}</button> 
         {/* prop */}
     </footer>
 )

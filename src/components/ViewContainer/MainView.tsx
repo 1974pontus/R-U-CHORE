@@ -1,10 +1,13 @@
 import React from 'react';
 import QuestionForm from "./QuestionForm";
 
+interface Props {
+    onProfilSelected: (profile: string) => void
+}
 
-const MainView = () => {
+const MainView = (props: Props) => {
 return (
-    <QuestionForm />
+    <QuestionForm onSubmit={props.onProfilSelected}/>
 )
 }
 

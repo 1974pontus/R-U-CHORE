@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, CSSProperties } from "react";
 import ProfileImg from './ViewContainer/ProfileImg'
 import Header from './Header'
 import Title from './ViewContainer/Title';
@@ -17,18 +17,31 @@ import ProfileView from "./ViewContainer/ProfileView";
 // }
 
 const Layout = () => {
+    const [profile, setProfile] = useState('')
+
+    const handleProfileSelected = (profile: string) => {
+      setProfile(profile)
+    }
+
+    console.log(profile)
     return (
    
       <div>
         <ProfileImg />
         <Header />
         <Title />
-        <MainView />
-         <ProfileView/>
-         
+        <MainView onProfilSelected={handleProfileSelected}/>
+        <ProfileView />
+         <div style={marginbottom}>.</div>
       </div>
     );
   };
   
-  export default Layout
 
+export default Layout
+
+
+
+const marginbottom: CSSProperties = {
+  marginBottom: '10rem'
+}
