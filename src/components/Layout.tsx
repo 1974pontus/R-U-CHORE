@@ -32,7 +32,7 @@ const Layout = () => {
         <Header imageSrc={require('../img/space.jpg')} alt='stardust in space'/>
         <Title />
         <MainView onProfilSelected={handleProfileSelected}/>
-        <ProfileView />
+        <div style={todolist}><ProfileView /></div>
          <div style={marginbottom}>.</div>
 
       </div>
@@ -45,7 +45,13 @@ export default Layout
 
 
 const marginbottom: CSSProperties = {
-  marginBottom: '7rem',
+  marginBottom: '6rem',
   textAlign: 'center',
   color: 'white'
 }
+
+
+
+const todolist: CSSProperties = {
+  margin: '2rem 0  0 5rem', 
+ }
