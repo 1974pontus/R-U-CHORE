@@ -6,13 +6,13 @@ interface Props {
 }
 
 
-function Footer(props: Props) {
+function FormField(props: Props) {
 return (
-    <footer style={footerContainer}>
+    <form style={footerContainer}>
         <input style={inputFelt} type="text" id="name" name="name" placeholder={props.inputplaceholder} /> 
         <button value="" style={mainButton}> {props.buttontext} </button> 
         {/* prop */}
-    </footer>
+    </form>
 )
 }
 
@@ -51,4 +51,4 @@ const mainButton: CSSProperties = {
 }
 
 
-export default Footer
+export default FormField

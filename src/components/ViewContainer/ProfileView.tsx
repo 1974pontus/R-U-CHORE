@@ -3,7 +3,7 @@ import TodoList from './TodoList'
 import { Todo, ToggleTodo, AddTodo } from './types'
 import AddTodoForm from './AddTodoForm'
 
-
+     
 
 const initialTodos: Array<Todo> = [
     { text:'Putsa Pistolerna', complete: true},
