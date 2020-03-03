@@ -1,10 +1,9 @@
-import React from 'react';
 
-
+import React, { useState, CSSProperties } from "react";
 import Header from './ViewContainer/Header'
 import Title from './ViewContainer/Title';
 import MainView from "./ViewContainer/MainView";
-// import ProfileView from "./ViewContainer/ProfileView";
+import ProfileView from "./ViewContainer/ProfileView";
 import ProfileImg from "./ViewContainer/ProfileImg";
 
 //tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
@@ -19,18 +18,40 @@ import ProfileImg from "./ViewContainer/ProfileImg";
 // }
 
 const Layout = () => {
+    const [profile, setProfile] = useState('')
+
+    const handleProfileSelected = (profile: string) => {
+      setProfile(profile)
+    }
+/* Klicka på submit-knappen och du får profilen loggad i consolen */
+    console.log(profile)
     return (
    
       <div>
         <ProfileImg imageSrc={require('../img/Leonardo-Dicaprio.jpg')} alt='leo DiCaprio at his best'/>
         <Header imageSrc={require('../img/space.jpg')} alt='stardust in space'/>
         <Title />
-        <MainView />
-        {/* <ProfileView/> */}
-         
+        <MainView onProfilSelected={handleProfileSelected}/>
+        <div style={todolist}><ProfileView /></div>
+         <div style={marginbottom}>.</div>
+
       </div>
     );
   };
   
-  export default Layout
 
+export default Layout
+
+
+
+const marginbottom: CSSProperties = {
+  marginBottom: '6rem',
+  textAlign: 'center',
+  color: 'white'
+}
+
+
+
+const todolist: CSSProperties = {
+  margin: '2rem 0  0 5rem', 
+ }
