@@ -23,7 +23,7 @@ const Layout = () => {
     const handleProfileSelected = (profile: string) => {
       setProfile(profile)
     }
-
+/* Klicka på submit-knappen och du får profilen loggad i consolen */
     console.log(profile)
     return (
    
