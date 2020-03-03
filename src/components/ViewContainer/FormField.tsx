@@ -13,7 +13,7 @@ interface FormFieldProps {
 function FormField(props: FormFieldProps) {
 return (
     <div style={footerContainer}>
-        <input style={inputFelt} value="" type="text" id="name" name="name" onChange={props.onChange} placeholder={props.inputplaceholder} /> 
+        <input style={inputFelt} type="text" id="name" name="name" onChange={props.onChange} placeholder={props.inputplaceholder}></input> 
         <button value="" style={mainButton} onClick={props.onClick}> {props.buttontext} </button> 
     </div>
 )

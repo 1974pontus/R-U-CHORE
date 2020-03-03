@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, CSSProperties } from 'react'
 import TodoList from './TodoList'
 import { Todo, ToggleTodo, AddTodo } from './types'
 import AddTodos from './AddTodos'
@@ -8,7 +8,10 @@ import AddTodos from './AddTodos'
 
 const initialTodos: Array<Todo> = [
     { text:'Putsa Pistolerna', complete: true},
-    { text: 'Köpa Höghatt', complete: false}
+    { text: 'Köpa Höghatt', complete: false},
+    { text: 'Laga fickuret', complete: false},
+    { text: 'Pussa mamsen', complete: false}
+
 ]
 
 const ProfileView: React.FC = () => {
@@ -33,11 +36,19 @@ const addTodo: AddTodo = newTodo => {
 }
 
 return (
-    <React.Fragment>
+    <div style={liststyling}>
+    <React.Fragment >
        <TodoList todos={todos} toggleTodo={toggleTodo} />
        <AddTodos addTodo={addTodo}/>
     </React.Fragment>
+    </div>
 )
+}
+
+const liststyling: CSSProperties = {
+    marginTop: '7rem',
+    fontSize: '30px',
+    fontFamily: 'monospace'
 }
 
 export default ProfileView
