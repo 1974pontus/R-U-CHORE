@@ -1,17 +1,13 @@
 import React, { CSSProperties } from "react";
-import imageSrc from '../img/leo.jpg'
 
-function ProfileImg(){
+export interface Props {
+  imageSrc: string,
+  alt: string
+}
 
-  
-  return (
-    <div>
-      <img src={imageSrc} style={profile} alt="Leo DiCaprio in romeo and juliet" />
-     
-    </div>
-    
-  );
-};
+function ProfileImg(props: Props) {
+  return <img style={profile} src={props.imageSrc} alt={props.alt} />;
+}
 
 export default ProfileImg;
 
@@ -24,3 +20,5 @@ const profile: CSSProperties = {
     top: '15rem',
     transform: 'translate(-50%, -50%)'
 }
+
+
