@@ -1,18 +1,21 @@
 import React, { CSSProperties } from 'react';
 
-interface Props {
+interface FormFieldProps {
   inputplaceholder: string;
   buttontext: string;
+  onClick: ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)
+  onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void)
+  value: string
+  type: string 
 }
 
 
-function FormField(props: Props) {
+function FormField(props: FormFieldProps) {
 return (
-    <form style={footerContainer}>
-        <input style={inputFelt} type="text" id="name" name="name" placeholder={props.inputplaceholder} /> 
-        <button value="" style={mainButton}> {props.buttontext} </button> 
-        {/* prop */}
-    </form>
+    <div style={footerContainer}>
+        <input style={inputFelt} value="" type="text" id="name" name="name" onChange={props.onChange} placeholder={props.inputplaceholder} /> 
+        <button value="" style={mainButton} onClick={props.onClick}> {props.buttontext} </button> 
+    </div>
 )
 }
 

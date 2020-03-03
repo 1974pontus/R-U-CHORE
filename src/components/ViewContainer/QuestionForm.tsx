@@ -1,6 +1,6 @@
 import React from "react";
 import {CSSProperties} from 'react'
-import FormField from "./FormField";
+// import FormField from "./FormField";
 
 /* interface QuestionForm {
   htmlFor: string;
@@ -31,7 +31,7 @@ const QuestionForm = () => {
       <input type="radio" id="Q3No" name="Q3" value="No" />
       <label htmlFor="Q3">Nej</label>
       <br />
-      <FormField inputplaceholder="Skriv in ditt namn..." buttontext="Klar" ></FormField>
+      {/* <FormField inputplaceholder="Skriv in ditt namn..." buttontext="Klar" ></FormField> */}
 </form>
 
   );

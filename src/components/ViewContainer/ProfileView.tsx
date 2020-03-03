@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import TodoList from './TodoList'
 import { Todo, ToggleTodo, AddTodo } from './types'
-import AddTodoForm from './AddTodoForm'
+import AddTodos from './AddTodos'
+
 
      
 
@@ -34,7 +35,7 @@ const addTodo: AddTodo = newTodo => {
 return (
     <React.Fragment>
        <TodoList todos={todos} toggleTodo={toggleTodo} />
-       <AddTodoForm addTodo={addTodo}/>
+       <AddTodos addTodo={addTodo}/>
     </React.Fragment>
 )
 }
