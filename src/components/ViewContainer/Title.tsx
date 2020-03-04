@@ -1,13 +1,14 @@
 import React from 'react';
 import {CSSProperties} from 'react'
 
-type Props = React.PropsWithChildren<{
-  
-}>
+interface Props{
+name: string
+
+}
 
 const Title = (props: Props) => {
   return (
-  <h3 style={title}>{props.children}</h3>
+  <h3 style={title}>{props.name}</h3>
   );
 };
 
@@ -15,6 +16,7 @@ export default Title;
 
 
 const title: CSSProperties = {
+marginTop: '10rem',
 textAlign: 'center',
 width: '100%'
 }
