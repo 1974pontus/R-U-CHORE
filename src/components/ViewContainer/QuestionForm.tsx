@@ -1,15 +1,22 @@
-import React from "react";
+import React, { FormEvent } from "react";
 import {CSSProperties} from 'react'
 // import FormField from "./FormField";
 
-/* interface QuestionForm {
-  htmlFor: string;
-} */
+interface Props {
+  onSubmit: (profil: string) => void;
+}
 
 
-const QuestionForm = () => {
+const QuestionForm = (props: Props) => {
+  const handleOnSubmit = (e: FormEvent) => {
+    // stoppa form elemtet att uppdatera sidan, den gör det automatiskt annars pga. det är en form
+    e.preventDefault()
+    //TODO: Ta reda på vem man blev
+    props.onSubmit("leo")
+  }
+
   return (
-    <form style={questionForm}>
+    <form onSubmit={handleOnSubmit} style={questionForm}>
       <p>Här ska fråga nummer ett vara</p>
       <input type="radio" id="Q1Yes" name="Q1" value="Yes" />
       <label htmlFor="Q1">Ja</label>
@@ -38,6 +45,7 @@ const QuestionForm = () => {
 };
 
 const questionForm: CSSProperties = {
+ marginTop: '4rem', 
 textAlign: 'center',
 width: '100%'
 }
