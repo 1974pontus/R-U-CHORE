@@ -3,7 +3,7 @@ import React, { useState, CSSProperties } from "react";
 import Header from './ViewContainer/Header'
 import Title from './ViewContainer/Title';
 import MainView from "./ViewContainer/MainView";
-import ProfileView from "./ViewContainer/ProfileView";
+// import ProfileView from "./ViewContainer/ProfileView";
 import ProfileImg from "./ViewContainer/ProfileImg";
 
 //tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
@@ -32,7 +32,9 @@ const Layout = () => {
         <Header imageSrc={require('../img/space.jpg')} alt='stardust in space'/>
         <Title name="Här ska 2 olika titel vara"/>
         <MainView onProfilSelected={handleProfileSelected}/>
-        <div style={todolist}><ProfileView /></div>
+        <div style={todolist}>
+          {/* <ProfileView /> */}
+          </div>
          <div style={marginbottom}>.</div>
 
       </div>

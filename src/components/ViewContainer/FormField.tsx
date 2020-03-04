@@ -1,18 +1,21 @@
 import React, { CSSProperties } from 'react';
 
-interface Props {
+interface FormFieldProps {
   inputplaceholder: string;
   buttontext: string;
+  onClick: ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)
+  onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void)
+  value: string
+  type: string 
 }
 
 
-function Footer(props: Props) {
+function FormField(props: FormFieldProps) {
 return (
-    <footer style={footerContainer}>
-        <input style={inputFelt} type="text" id="name" name="name" placeholder={props.inputplaceholder} /> 
-        <button style={mainButton}>{props.buttontext}</button> 
-        {/* prop */}
-    </footer>
+    <div style={footerContainer}>
+        <input style={inputFelt} type="text" id="name" name="name" onChange={props.onChange} placeholder={props.inputplaceholder}></input> 
+        <button value="" style={mainButton} onClick={props.onClick}> {props.buttontext} </button> 
+    </div>
 )
 }
 
@@ -51,4 +54,4 @@ const mainButton: CSSProperties = {
 }
 
 
-export default Footer
+export default FormField
