@@ -4,7 +4,7 @@ interface FormFieldProps {
   inputplaceholder: string;
   buttontext: string;
   onClick: ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)
-  onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void)
+  onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void)
   value: string
   type: string 
 }
@@ -13,7 +13,7 @@ interface FormFieldProps {
 function FormField(props: FormFieldProps) {
 return (
     <div style={footerContainer}>
-        <input style={inputFelt} type="text" id="name" name="name" onChange={props.onChange} placeholder={props.inputplaceholder}></input> 
+        <input style={inputFelt} onChange={props.onChange} placeholder={props.inputplaceholder}></input> 
         <button value="" style={mainButton} onClick={props.onClick}> {props.buttontext} </button> 
     </div>
 )

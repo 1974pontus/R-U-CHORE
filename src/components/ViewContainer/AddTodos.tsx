@@ -21,8 +21,6 @@ const AddTodos: React.FC<AddTodoProps> = ({ addTodo }) => {
 
     return (
         <form>
-            {/* <input type="text" value={newTodo} onChange={handleChange}/> 
-            <button type='submit' onClick={handleSubmit}>Add Todo</button> */}
             <FormField type={"text"}onChange={handleChange} inputplaceholder={'More Todo´s'} value={newTodo} onClick={handleSubmit} buttontext={'ADD'}/>
         </form>
     )
