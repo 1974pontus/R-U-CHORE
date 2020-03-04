@@ -30,7 +30,7 @@ const Layout = () => {
       <div>
         <ProfileImg imageSrc={require('../img/Leonardo-Dicaprio.jpg')} alt='leo DiCaprio at his best'/>
         <Header imageSrc={require('../img/space.jpg')} alt='stardust in space'/>
-        <Title />
+        <Title name="Här ska 2 olika titel vara"/>
         <MainView onProfilSelected={handleProfileSelected}/>
         <div style={todolist}><ProfileView /></div>
          <div style={marginbottom}>.</div>

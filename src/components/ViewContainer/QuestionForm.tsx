@@ -9,6 +9,7 @@ interface Props {
 
 const QuestionForm = (props: Props) => {
   const handleOnSubmit = (e: FormEvent) => {
+    // stoppa form elemtet att uppdatera sidan, den gör det automatiskt annars pga. det är en form
     e.preventDefault()
     //TODO: Ta reda på vem man blev
     props.onSubmit("leo")
