@@ -1,6 +1,6 @@
 import React, { FormEvent } from "react";
 import {CSSProperties} from 'react'
-// import FormField from "./FormField";
+import FormField from "./FormField";
 
 interface Props {
   onSubmit: (profil: string) => void;
@@ -39,8 +39,7 @@ const QuestionForm = (props: Props) => {
       <input type="radio" id="Q3No" name="Q3" value="No" />
       <label htmlFor="Q3">Nej</label>
       <br />
-      {/* <FormField inputplaceholder="Skriv in ditt namn..." buttontext="Klar" ></FormField> */}
-      {/* <FormField type={"text"} inputplaceholder={'Whats´s your name'} value="" onClick={handleOnSubmit} buttontext={'SUBMIT'}/> */}
+      <FormField onSubmit={} buttonText='Submit' placeHolder='What´s your name?' />
 </form>
 
   );

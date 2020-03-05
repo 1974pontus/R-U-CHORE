@@ -2,8 +2,10 @@ import React, { CSSProperties } from 'react';
 
 
 interface Props {
-  onSubmit: (todo: string) => void
+  onSubmit: (submit: string) => void
   defaultValue?: string
+  placeHolder: string
+  buttonText: string
 }
 
 interface State {
@@ -12,7 +14,7 @@ interface State {
 
 
 export class FormField extends React.Component<Props, State> {
-  constructor(props: {onSubmit: (todo: string) => void}) {
+  constructor(props: Props) {
     super(props)
     this.state = {
       value: this.props.defaultValue ? this.props.defaultValue : ""
@@ -25,11 +27,18 @@ export class FormField extends React.Component<Props, State> {
     })
   }
 
+  private clearInputField = () => {
+    this.props.onSubmit(this.state.value)
+    this.setState({
+      value: ""
+    })
+  }
+
   render() {
     return (
       <div style={footerContainer}>
-        <input style={inputField} value={this.state.value} type="text" onChange={this.updateValue}/>
-        <button style={mainButton} onClick={() => this.props.onSubmit(this.state.value)}></button>
+        <input style={inputField} placeholder={this.props.placeHolder} value={this.state.value} type="text" onChange={this.updateValue}/>
+        <button style={mainButton} onClick={this.clearInputField}>{this.props.buttonText}</button>
       </div>
     )
   }

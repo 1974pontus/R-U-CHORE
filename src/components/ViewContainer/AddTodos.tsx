@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { AddTodo } from './types'
-import FormField from './FormField'
+// import FormField from './FormField'
 
 interface AddTodoProps {
     addTodo: AddTodo;
@@ -27,7 +27,7 @@ const AddTodos: React.FC<AddTodoProps> = ({ addTodo }) => {
 
     return (
         <form>
-            <FormField onSubmit={handleSubmit} defaultValue="Baka" />
+            {/* <FormField onSubmit={handleSubmit} defaultValue="Baka" /> */}
             {/* <FormField type={"text"}onChange={handleChange} inputplaceholder={'More Todo´s'} value={newTodo} onClick={handleSubmit} buttontext={'ADD'}/> */}
         </form>
     )
