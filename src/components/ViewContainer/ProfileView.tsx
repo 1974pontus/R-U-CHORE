@@ -1,10 +1,9 @@
 import React, { useState, CSSProperties } from 'react'
 import TodoList from './TodoList'
 import { Todo, ToggleTodo, AddTodo } from './types'
-import AddTodos from './AddTodos'
 
+import FormField from './FormField'
 
-     
 
 const initialTodos: Array<Todo> = [
     { text:'Putsa Pistolerna', complete: true},
@@ -39,7 +38,7 @@ return (
     <div style={liststyling}>
     <React.Fragment >
        <TodoList todos={todos} toggleTodo={toggleTodo} />
-       <AddTodos addTodo={addTodo}/>
+       <FormField onSubmit={addTodo} defaultValue="" />
     </React.Fragment>
     </div>
 )

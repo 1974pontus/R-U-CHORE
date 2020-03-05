@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, MouseEvent } from 'react'
+import React, { useState } from 'react'
 import { AddTodo } from './types'
 import FormField from './FormField'
 
@@ -9,7 +9,7 @@ interface AddTodoProps {
 const AddTodos: React.FC<AddTodoProps> = ({ addTodo }) => {
     const [newTodo, setNewTodo] = useState('')
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  /*   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setNewTodo(e.target.value)
     }
 
@@ -17,11 +17,18 @@ const AddTodos: React.FC<AddTodoProps> = ({ addTodo }) => {
         e.preventDefault()
         addTodo(newTodo)
         setNewTodo('')
-    }
+    } */
+
+    const handleSubmit = (todo: string) => {
+        addTodo(todo)
+        addTodo(newTodo)
+        setNewTodo('')
+    } 
 
     return (
         <form>
-            <FormField type={"text"}onChange={handleChange} inputplaceholder={'More Todo´s'} value={newTodo} onClick={handleSubmit} buttontext={'ADD'}/>
+            <FormField onSubmit={handleSubmit} defaultValue="Baka" />
+            {/* <FormField type={"text"}onChange={handleChange} inputplaceholder={'More Todo´s'} value={newTodo} onClick={handleSubmit} buttontext={'ADD'}/> */}
         </form>
     )
 }
