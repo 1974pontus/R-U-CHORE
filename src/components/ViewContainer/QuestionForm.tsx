@@ -1,59 +1,107 @@
 import React, { FormEvent } from "react";
-import {CSSProperties} from 'react'
+import { CSSProperties } from "react";
 import FormField from "./FormField";
 
 interface Props {
   onSubmit: (profil: string) => void;
-
+  onChange?: boolean;
+  answer?: string;
 }
 
+interface State {
+ 
+  question1?: boolean;
+  question2?: boolean;
+  question3?: boolean;
 
-const QuestionForm = (props: Props) => {
-  const handleOnSubmit = (e: FormEvent) => {
-    // stoppa form elemtet att uppdatera sidan, den gör det automatiskt annars pga. det är en form
-    e.preventDefault()
+  name: string;
+}
+
+class QuestionForm extends React.Component<Props, State> {
+  constructor (props: Props) {
+    super(props)
+
+    this.state = {
+      name: ""
+    }
+  }  
+  handleOnSubmit = (e: FormEvent) => {
+    // stoppa form elemtet att uppdatera sidan automatiskt
+    e.preventDefault();
+    
+    console.log(this.state)
     //TODO: Ta reda på vem man blev
-    props.onSubmit("leo")
+    this.props.onSubmit("leo") 
+  };
+
+
+  render() {
+    return (
+      <form onSubmit={this.handleOnSubmit}>
+        <p>Här ska fråga nummer ett vara</p>
+        <input
+          type="radio"
+          id="Q1Yes"
+          name="question1"
+          onChange={(e) => this.setState({ question1: e.target.checked })}
+        />
+        <label htmlFor="Q1Yes">Ja</label>
+        <input
+          type="radio"
+          id="Q1No"
+          name="question1"
+          onChange={(e) => this.setState({ question1: !e.target.checked })}
+        />
+        <label htmlFor="Q1No">Nej</label>
+        <br />
+
+        <p>Här ska fråga nummer två vara</p>
+        <input
+          type="radio"
+          id="Q2Yes"
+          name="question2"
+          onChange={(e) => this.setState({ question2: e.target.checked })}
+        />
+        <label htmlFor="Q2Yes">Ja</label>
+        <input
+          type="radio"
+          id="Q2No"
+          name="question2"
+          onChange={(e) => this.setState({ question2: !e.target.checked })}
+        />
+        <label htmlFor="Q2No">Nej</label>
+        <br />
+
+        <p>Här ska fråga nummer tre vara</p>
+        <input
+          type="radio"
+          id="Q3Yes"
+          name="question3"
+          onChange={(e) => this.setState({ question3: e.target.checked })}
+        />
+        <label htmlFor="Q3Yes">Ja</label>
+        <input
+          type="radio"
+          id="Q3No"
+          name="question3"
+          onChange={(e) => this.setState({ question3: !e.target.checked })}
+        />
+        <label htmlFor="Q3No">Nej</label>
+        <br />
+        <FormField
+          onChange={(name) => this.setState({ name })}
+          buttonText="Submit"
+          placeHolder="What´s your name?"
+        />
+      </form>
+    );
   }
-
-  const nameSubmit = (name: string) => {
-    console.log(name)
-  }
-
-  return (
-    <form onSubmit={handleOnSubmit} style={questionForm}>
-      <p>Här ska fråga nummer ett vara</p>
-      <input type="radio" id="Q1Yes" name="Q1" value="Yes" />
-      <label htmlFor="Q1">Ja</label>
-      <input type="radio" id="Q1No" name="Q1" value="No" />
-      <label htmlFor="Q1">Nej</label>
-      <br />
-  
-      <p>Här ska fråga nummer två vara</p>
-      <input type="radio" id="Q2Yes" name="Q2" value="Yes" />
-      <label htmlFor="Q2">Ja</label>
-      <input type="radio" id="Q2No" name="Q2" value="No" />
-      <label htmlFor="Q2">Nej</label>
-      <br />
-
-
-      <p>Här ska fråga nummer tre vara</p>
-      <input type="radio" id="Q3Yes" name="Q3" value="Yes" />
-      <label htmlFor="Q3">Ja</label>
-      <input type="radio" id="Q3No" name="Q3" value="No" />
-      <label htmlFor="Q3">Nej</label>
-      <br />
-      <FormField onSubmit={nameSubmit} buttonText='Submit' placeHolder='What´s your name?' />
-</form>
-
-  );
-};
+}
 
 const questionForm: CSSProperties = {
- marginTop: '4rem', 
-textAlign: 'center',
-width: '100%'
-}
-
+  marginTop: "4rem",
+  textAlign: "center",
+  width: "100%"
+};
 
 export default QuestionForm;
