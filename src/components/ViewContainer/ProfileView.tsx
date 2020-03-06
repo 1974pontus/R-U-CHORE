@@ -1,17 +1,14 @@
 import React, { useState, CSSProperties } from 'react'
 import TodoList from './TodoList'
 import { Todo, ToggleTodo, AddTodo } from './types'
-import AddTodos from './AddTodos'
 
+import FormField from './FormField'
 
-     
 
 const initialTodos: Array<Todo> = [
     { text:'Putsa Pistolerna', complete: true},
     { text: 'Köpa Höghatt', complete: false},
-    { text: 'Laga fickuret', complete: false},
-    { text: 'Pussa mamsen', complete: false}
-
+    { text: 'Laga fickuret', complete: false}
 ]
 
 const ProfileView: React.FC = () => {
@@ -35,11 +32,12 @@ const addTodo: AddTodo = newTodo => {
     setTodos([...todos, { text: newTodo, complete: false}])
 }
 
+
 return (
     <div style={liststyling}>
     <React.Fragment >
        <TodoList todos={todos} toggleTodo={toggleTodo} />
-       <AddTodos addTodo={addTodo}/>
+       <FormField onSubmit={addTodo} buttonText='submit' placeHolder='Add your todos' />
     </React.Fragment>
     </div>
 )
