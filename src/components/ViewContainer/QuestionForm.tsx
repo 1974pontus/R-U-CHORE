@@ -1,9 +1,10 @@
 import React, { FormEvent } from "react";
 import {CSSProperties} from 'react'
-// import FormField from "./FormField";
+import FormField from "./FormField";
 
 interface Props {
   onSubmit: (profil: string) => void;
+
 }
 
 
@@ -13,6 +14,10 @@ const QuestionForm = (props: Props) => {
     e.preventDefault()
     //TODO: Ta reda på vem man blev
     props.onSubmit("leo")
+  }
+
+  const nameSubmit = (name: string) => {
+    console.log(name)
   }
 
   return (
@@ -38,7 +43,7 @@ const QuestionForm = (props: Props) => {
       <input type="radio" id="Q3No" name="Q3" value="No" />
       <label htmlFor="Q3">Nej</label>
       <br />
-      {/* <FormField inputplaceholder="Skriv in ditt namn..." buttontext="Klar" ></FormField> */}
+      <FormField onSubmit={nameSubmit} buttonText='Submit' placeHolder='What´s your name?' />
 </form>
 
   );
