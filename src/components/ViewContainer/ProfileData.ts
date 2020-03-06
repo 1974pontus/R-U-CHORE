@@ -3,10 +3,10 @@ interface Todo  {
     complete: boolean
 }
 
-interface ProfileData  {
+export interface ProfileData  {
     id: string
-    ProfileImg: string
-    HeaderImg: string
+    profileImg: string
+    headerImg: string
     backgroundImg: string
     initialTodos: Array<Todo>
 }
@@ -14,8 +14,8 @@ interface ProfileData  {
 const ProfileData = [
     {
         id: 'steampunk',
-        ProfileImg: '../img/steamFace.png',
-        HeaderImg: '../img/kugghjul.png',
+        profileImg: '../img/steamFace.png',
+        headerImg: '../img/kugghjul.png',
         backgroundImg: '../img/steamBG.jpg',
         initialTodos:   [
             { text:'Putsa Pistolerna', complete: true},
@@ -25,8 +25,8 @@ const ProfileData = [
     },
     {
         id: 'zlatan',
-        ProfileImg: '../img/zlatan.jpg',
-        HeaderImg: '../img/milan.jpg',
+        profileImg: '../img/zlatan.jpg',
+        headerImg: '../img/milan.jpg',
         initialTodos:   [
             { text:'Zlatan har inga todos, Zlatan ger todos', complete: true},
             
@@ -34,8 +34,8 @@ const ProfileData = [
     },
     {
         id: 'nerd',
-        ProfileImg: '../img/nerd.jpg',
-        HeaderImg: '../img/nerdBG.jpeg',
+        profileImg: '../img/nerd.jpg',
+        headerImg: '../img/nerdBG.jpeg',
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
             { text: 'Månadens dusch', complete: false},
