@@ -1,5 +1,5 @@
 
-import React, { CSSProperties, useState } from "react";
+import React, { CSSProperties } from "react";
 import Header from './ViewContainer/Header'
 import Title from './ViewContainer/Title';
 // import MainView from "./ViewContainer/MainView";
