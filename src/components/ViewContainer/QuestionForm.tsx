@@ -17,6 +17,8 @@ const QuestionForm = (props: Props) => {
     // stoppa form elemtet att uppdatera sidan, den gör det automatiskt annars pga. det är en form
     e.preventDefault()
     //TODO: Ta reda på vem man blev
+
+
     props.onSubmit("leo")
   }
 
@@ -31,7 +33,6 @@ const QuestionForm = (props: Props) => {
       <input
         type="radio"
         id="Q1Yes"
-        name="Q1"
         value="Q1Yes"
         checked={state.answer ==="Q1Yes"}
         onChange={handleChange}
@@ -40,7 +41,6 @@ const QuestionForm = (props: Props) => {
       <input 
         type="radio" 
         id="Q1No" 
-        name="Q1" 
         value="Q1No" 
         checked={state.answer ==="Q1No"}
         onChange={handleChange}
@@ -51,8 +51,7 @@ const QuestionForm = (props: Props) => {
       <p>Här ska fråga nummer två vara</p>
       <input 
         type="radio" 
-        id="Q2Yes" 
-        name="Q2" 
+        id="Q2Yes"  
         value="Q2Yes" 
         checked={state.answer ==="Q2Yes"}
         onChange={handleChange}
@@ -60,8 +59,7 @@ const QuestionForm = (props: Props) => {
       <label htmlFor="Q2">Ja</label>
       <input 
         type="radio" 
-        id="Q2No" 
-        name="Q2" 
+        id="Q2No"  
         value="Q2No" 
         checked={state.answer ==="Q2No"}
         onChange={handleChange}
@@ -73,7 +71,6 @@ const QuestionForm = (props: Props) => {
       <input 
         type="radio" 
         id="Q3Yes" 
-        name="Q3" 
         value="Q3Yes" 
         checked={state.answer ==="Q3Yes"}
         onChange={handleChange}
@@ -81,8 +78,7 @@ const QuestionForm = (props: Props) => {
       <label htmlFor="Q3">Ja</label>
       <input 
         type="radio" 
-        id="Q3No" 
-        name="Q3" 
+        id="Q3No"  
         value="Q3No" 
         checked={state.answer ==="Q3No"}
         onChange={handleChange}
