@@ -32,11 +32,6 @@ const Layout = () => {
         <Header imageSrc={require('../img/space.jpg')} alt='stardust in space'/>
         <Title name="Här ska 2 olika titel vara"/>
         <MainView onProfilSelected={handleProfileSelected}/>
-        <div style={todolist}>
-          {/* <ProfileView /> */}
-          </div>
-         <div style={marginbottom}>.</div>
-
       </div>
     );
   };

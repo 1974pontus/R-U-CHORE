@@ -1,4 +1,5 @@
 import React, { FormEvent } from "react";
+import { Redirect } from 'react-router-dom'
 import { CSSProperties } from "react";
 import FormField from "./FormField";
 
@@ -9,12 +10,11 @@ interface Props {
 }
 
 interface State {
- 
   question1?: boolean;
   question2?: boolean;
   question3?: boolean;
-
   name: string;
+  shouldRedirect: boolean;
 }
 
 class QuestionForm extends React.Component<Props, State> {
@@ -22,7 +22,8 @@ class QuestionForm extends React.Component<Props, State> {
     super(props)
 
     this.state = {
-      name: ""
+      name: "",
+      shouldRedirect: false
     }
   }  
   handleOnSubmit = (e: FormEvent) => {
@@ -31,11 +32,17 @@ class QuestionForm extends React.Component<Props, State> {
     
     console.log(this.state)
     //TODO: Ta reda på vem man blev
-    this.props.onSubmit("leo") 
+    this.props.onSubmit("leo")
+    this.setState({ shouldRedirect: true })
   };
 
 
   render() {
+    if (this.state.shouldRedirect) {
+      return <Redirect to="/profile-view"/>
+    }
+
+
     return (
       <form onSubmit={this.handleOnSubmit}>
         <p>Här ska fråga nummer ett vara</p>
