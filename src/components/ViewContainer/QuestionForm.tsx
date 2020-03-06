@@ -1,7 +1,9 @@
 import React, { FormEvent } from "react";
 import { Redirect } from 'react-router-dom'
-import { CSSProperties } from "react";
+// import { CSSProperties } from "react";
 import FormField from "./FormField";
+
+
 
 interface Props {
   onSubmit: (profil: string) => void;
@@ -105,10 +107,10 @@ class QuestionForm extends React.Component<Props, State> {
   }
 }
 
-const questionForm: CSSProperties = {
-  marginTop: "4rem",
-  textAlign: "center",
-  width: "100%"
-};
+// const questionForm: CSSProperties = {
+//   marginTop: "4rem",
+//   textAlign: "center",
+//   width: "100%"
+// };
 
 export default QuestionForm;

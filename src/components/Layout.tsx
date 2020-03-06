@@ -1,10 +1,9 @@
 
 
-import React, { CSSProperties, useState } from "react";
+import React, { useState } from "react";
 import Header from './viewContainer/Header'
 import Title from './viewContainer/Title';
 import MainView from "./viewContainer/MainView";
-// import ProfileView from "./ViewContainer/ProfileView";
 import ProfileImg from "./viewContainer/ProfileImg";
 
 
@@ -20,13 +19,13 @@ import ProfileImg from "./viewContainer/ProfileImg";
 // }
 
 const Layout = () => {
-//     const [profile, setProfile] = useState('')
+    const [profile, setProfile] = useState('')
 
-//     const handleProfileSelected = (profile: string) => {
-//       setProfile(profile)
-//     }
-// /* Klicka på submit-knappen och du får profilen loggad i consolen */
-//     console.log(profile)
+    const handleProfileSelected = (profile: string) => {
+      setProfile(profile)
+    }
+/* Klicka på submit-knappen och du får profilen loggad i consolen */
+    console.log(profile)
     return (
    
       <div>
@@ -36,10 +35,7 @@ const Layout = () => {
 
         <MainView onProfilSelected={handleProfileSelected}/>
 
-        <div style={todolist}>
-          <ProfileView />
-          </div>
-         <div style={marginbottom}>.</div>
+        
 
 
       </div>
@@ -51,14 +47,14 @@ export default Layout
 
 
 
-const marginbottom: CSSProperties = {
-  marginBottom: '6rem',
-  textAlign: 'center',
-  color: 'white'
-}
+// const marginbottom: CSSProperties = {
+//   marginBottom: '6rem',
+//   textAlign: 'center',
+//   color: 'white'
+// }
 
 
 
-const todolist: CSSProperties = {
-  margin: '2rem 0  0 5rem', 
- }
+// const todolist: CSSProperties = {
+//   margin: '2rem 0  0 5rem', 
+//  }
