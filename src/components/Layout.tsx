@@ -1,10 +1,10 @@
 
 import React, { CSSProperties, useState } from "react";
-import Header from './ViewContainer/Header'
-import Title from './ViewContainer/Title';
-import MainView from "./ViewContainer/MainView";
+import Header from './viewContainer/Header'
+import Title from './viewContainer/Title';
+import MainView from "./viewContainer/MainView";
 // import ProfileView from "./ViewContainer/ProfileView";
-import ProfileImg from "./ViewContainer/ProfileImg";
+import ProfileImg from "./viewContainer/ProfileImg";
 
 //tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
 /* import Footer from "./ViewContainer/Footer";

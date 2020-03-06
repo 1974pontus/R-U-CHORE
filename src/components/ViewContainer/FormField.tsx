@@ -2,7 +2,8 @@ import React, { CSSProperties } from 'react';
 
 
 interface Props {
-  onSubmit: (submit: string) => void
+  onChange?: (name: string) => void
+  onSubmit?: (submit: string) => void
   defaultValue?: string
   placeHolder: string
   buttonText: string
@@ -22,13 +23,18 @@ export class FormField extends React.Component<Props, State> {
   }
 
   private updateValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (this.props.onChange) {
+      this.props.onChange(event.target.value)
+    }
     this.setState({
       value: event.target.value
     })
   }
 
   private clearInputField = () => {
-    this.props.onSubmit(this.state.value)
+    if (this.props.onSubmit) {
+      this.props.onSubmit(this.state.value)
+    }
     this.setState({
       value: ""
     })
@@ -51,9 +57,7 @@ const footerContainer: CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  position: 'fixed',
   width: '100%',
-  bottom: '0',
   marginBottom: '0.4rem'
 }
 
