@@ -16,6 +16,10 @@ const QuestionForm = (props: Props) => {
     props.onSubmit("leo")
   }
 
+  const nameSubmit = (name: string) => {
+    console.log(name)
+  }
+
   return (
     <form onSubmit={handleOnSubmit} style={questionForm}>
       <p>Här ska fråga nummer ett vara</p>
@@ -39,7 +43,7 @@ const QuestionForm = (props: Props) => {
       <input type="radio" id="Q3No" name="Q3" value="No" />
       <label htmlFor="Q3">Nej</label>
       <br />
-      <FormField onSubmit={} buttonText='Submit' placeHolder='What´s your name?' />
+      <FormField onSubmit={nameSubmit} buttonText='Submit' placeHolder='What´s your name?' />
 </form>
 
   );
