@@ -1,4 +1,4 @@
-import React, { useState, CSSProperties } from 'react'
+import React, { useState, CSSProperties } from "react"
 import TodoList from './TodoList'
 import { Todo, ToggleTodo, AddTodo } from './types'
 

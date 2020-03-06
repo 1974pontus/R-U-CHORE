@@ -1,10 +1,12 @@
 
-import React, { CSSProperties } from "react";
-import Header from './ViewContainer/Header'
-import Title from './ViewContainer/Title';
-// import MainView from "./ViewContainer/MainView";
-import ProfileView from "./ViewContainer/ProfileView";
-import ProfileImg from "./ViewContainer/ProfileImg";
+
+import React, { CSSProperties, useState } from "react";
+import Header from './viewContainer/Header'
+import Title from './viewContainer/Title';
+import MainView from "./viewContainer/MainView";
+// import ProfileView from "./ViewContainer/ProfileView";
+import ProfileImg from "./viewContainer/ProfileImg";
+
 
 //tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
 /* import Footer from "./ViewContainer/Footer";
@@ -31,11 +33,14 @@ const Layout = () => {
         <ProfileImg imageSrc={require('../img/Leonardo-Dicaprio.jpg')} alt='leo DiCaprio at his best'/>
         <Header imageSrc={require('../img/space.jpg')} alt='stardust in space'/>
         <Title name="Här ska 2 olika titel vara"/>
-        {/* <MainView onProfilSelected={handleProfileSelected}/> */}
+
+        <MainView onProfilSelected={handleProfileSelected}/>
+
         <div style={todolist}>
           <ProfileView />
           </div>
          <div style={marginbottom}>.</div>
+
 
       </div>
     );
