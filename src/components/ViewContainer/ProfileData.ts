@@ -14,7 +14,7 @@ interface ProfileData  {
 const ProfileData = [
     {
         id: 'steampunk',
-        ProfileImg: '../img/steamy_couple.png',
+        ProfileImg: '../img/steamFace.png',
         HeaderImg: '../img/kugghjul.png',
         backgroundImg: '../img/steamBG.jpg',
         initialTodos:   [
