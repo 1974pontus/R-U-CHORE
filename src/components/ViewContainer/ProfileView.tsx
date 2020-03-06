@@ -46,7 +46,7 @@ return (
 const liststyling: CSSProperties = {
     marginTop: '7rem',
     fontSize: '30px',
-    fontFamily: 'monospace',
+    fontFamily: 'monospace',   
     backgroungImage: ':img/steamBG.jpg'
 }
 
