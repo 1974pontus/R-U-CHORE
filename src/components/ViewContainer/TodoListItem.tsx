@@ -1,5 +1,4 @@
-import React from "react";
-import "./TodoList.css";
+import React, { CSSProperties } from "react";
 import { Todo, ToggleTodo } from "./types";
 
 interface TodoListItemProps {
@@ -8,9 +7,14 @@ interface TodoListItemProps {
 }
 
 const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo }) => {
+  const completed: CSSProperties = {
+    textDecoration: 'line-through',
+    color: '#cdcdcd',
+    fontStyle: 'italic'
+  }
   return (
     <li style={{ listStyleType: "none" }}>
-      <label className={todo.complete ? "complete" : undefined}>
+      <label style={todo.complete ? completed: undefined}>
         <input
           type="checkbox"
           checked={todo.complete}
@@ -21,5 +25,6 @@ const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo }) => {
     </li>
   );
 };
+
 
 export default TodoListItem;
