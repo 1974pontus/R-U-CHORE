@@ -2,6 +2,7 @@ import React, { useState, CSSProperties } from "react"
 import TodoList from './TodoList'
 import { Todo, ToggleTodo, AddTodo } from './types'
 
+
 import FormField from './FormField'
 
 
@@ -47,7 +48,6 @@ const liststyling: CSSProperties = {
     marginTop: '7rem',
     fontSize: '30px',
     fontFamily: 'monospace',   
-    backgroungImage: ':img/steamBG.jpg'
 }
 
 export default ProfileView
