@@ -6,7 +6,7 @@ interface Props {
 }
 
 function ProfileImg(props: Props) {
-  return <img style={profile} src={props.profile.profileImg} />;
+  return <img style={profile} src={props.profile.profileImg} alt={props.profile.alt} />;
 }
 
 export default ProfileImg;

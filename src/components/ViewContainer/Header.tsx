@@ -7,7 +7,7 @@ interface Props {
 
 function Header(props: Props) {
   return (
-      <img style={header} src={props.profile.headerImg} />);
+      <img style={header} src={props.profile.headerImg} alt={props.profile.alt}/>);
 };
 
 export default Header;
