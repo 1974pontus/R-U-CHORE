@@ -16,7 +16,7 @@ interface Props {
 
 
 const Layout = () => {
-  const [profile, setProfile] = useState<ProfileData>();
+  const [profile, setProfile] = useState<ProfileData>(profileData[0]);
 
   const handleProfileSelected = (profile: ProfileData) => {
     setProfile(profile);
@@ -27,13 +27,12 @@ const Layout = () => {
 
   return (
     <React.Fragment>
-      <ProfileImg
-        profile={profileData[0]}
+      <ProfileImg profile={profile}
       />
       <Header
-        profile={profileData[0]}
+        profile={profile}
       />
-      <Title name="Här ska 2 olika titel vara" />
+      <Title name="Först svara på frågorna:" />
       <MainView onProfilSelected={handleProfileSelected} />
     </React.Fragment>
   );
