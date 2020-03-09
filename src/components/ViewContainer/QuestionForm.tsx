@@ -2,11 +2,12 @@ import React, { FormEvent } from "react";
 import { Redirect } from 'react-router-dom'
 // import { CSSProperties } from "react";
 import FormField from "./FormField";
+import profileData, { ProfileData } from "./ProfileData";
 
 
 
 interface Props {
-  onSubmit: (profil: string) => void;
+  onSubmit: (profil: ProfileData) => void;
   onChange?: boolean;
   answer?: string;
 }
@@ -34,7 +35,7 @@ class QuestionForm extends React.Component<Props, State> {
     
     console.log(this.state)
     //TODO: Ta reda på vem man blev
-    this.props.onSubmit("leo")
+    this.props.onSubmit(profileData[0])
     this.setState({ shouldRedirect: true })
   };
 

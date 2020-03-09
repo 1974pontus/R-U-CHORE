@@ -1,51 +1,45 @@
-
-
 import React, { useState } from "react";
-import Header from './viewContainer/Header'
-import Title from './viewContainer/Title';
+import Header from "./viewContainer/Header";
+import Title from "./viewContainer/Title";
 import MainView from "./viewContainer/MainView";
 import ProfileImg from "./viewContainer/ProfileImg";
+import profileData, { ProfileData } from "./viewContainer/ProfileData";
 
 
 //tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
 /* import Footer from "./ViewContainer/Footer";
 <Footer buttontext="klar" inputplaceholder="hej"></Footer>  */
+interface Props {
+  profile: ProfileData
 
+}
 
-// interface Profile {
-//     img: string
-//     name: string
-//     todos: string[]
-// }
 
 const Layout = () => {
-    const [profile, setProfile] = useState('')
+  const [profile, setProfile] = useState<ProfileData>();
 
-    const handleProfileSelected = (profile: string) => {
-      setProfile(profile)
-    }
-/* Klicka på submit-knappen och du får profilen loggad i consolen */
-    console.log(profile)
-    return (
-   
-      <div>
-        <ProfileImg imageSrc={require('../img/Leonardo-Dicaprio.jpg')} alt='leo DiCaprio at his best'/>
-        <Header imageSrc={require('../img/space.jpg')} alt='stardust in space'/>
-        <Title name="Här ska 2 olika titel vara"/>
-
-        <MainView onProfilSelected={handleProfileSelected}/>
-
-        
-
-
-      </div>
-    );
+  const handleProfileSelected = (profile: ProfileData) => {
+    setProfile(profile);
   };
   
+  /* Klicka på submit-knappen och du får profilen loggad i consolen */
+  console.log(profile);
 
-export default Layout
+  return (
+    <React.Fragment>
+      <ProfileImg
+        profile={profileData[0]}
+      />
+      <Header
+        profile={profileData[0]}
+      />
+      <Title name="Här ska 2 olika titel vara" />
+      <MainView onProfilSelected={handleProfileSelected} />
+    </React.Fragment>
+  );
+};
 
-
+export default Layout;
 
 // const marginbottom: CSSProperties = {
 //   marginBottom: '6rem',
@@ -53,8 +47,6 @@ export default Layout
 //   color: 'white'
 // }
 
-
-
 // const todolist: CSSProperties = {
-//   margin: '2rem 0  0 5rem', 
+//   margin: '2rem 0  0 5rem',
 //  }
