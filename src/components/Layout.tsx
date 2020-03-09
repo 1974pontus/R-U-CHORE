@@ -9,14 +9,11 @@ import profileData, { ProfileData } from "./viewContainer/ProfileData";
 //tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
 /* import Footer from "./ViewContainer/Footer";
 <Footer buttontext="klar" inputplaceholder="hej"></Footer>  */
-interface Props {
-  profile: ProfileData
 
-}
 
 
 const Layout = () => {
-  const [profile, setProfile] = useState<ProfileData>();
+  const [profile, setProfile] = useState<ProfileData>(profileData[2]);
 
   const handleProfileSelected = (profile: ProfileData) => {
     setProfile(profile);
@@ -28,13 +25,13 @@ const Layout = () => {
   return (
     <React.Fragment>
       <ProfileImg
-        profile={profileData[0]}
+        profile={profile}
       />
       <Header
-        profile={profileData[0]}
+        profile={profile}
       />
       <Title name="Här ska 2 olika titel vara" />
-      <MainView onProfilSelected={handleProfileSelected} />
+      <MainView profile={profile} onProfilSelected={handleProfileSelected} />
     </React.Fragment>
   );
 };

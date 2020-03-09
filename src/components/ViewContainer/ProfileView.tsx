@@ -1,16 +1,16 @@
 import React, { useState, CSSProperties } from "react";
 import TodoList from "./TodoList";
-import { Todo, ToggleTodo, AddTodo } from "./types";
+import { ToggleTodo, AddTodo } from "./types";
 import FormField from "./FormField";
+import { ProfileData } from "./ProfileData";
 
-const initialTodos: Array<Todo> = [
-  { text: "Putsa Pistolerna", complete: true },
-  { text: "Köpa Höghatt", complete: false },
-  { text: "Laga fickuret", complete: false }
-];
+interface Props {
+  profile: ProfileData
+}
 
-const ProfileView: React.FC = () => {
-  const [todos, setTodos] = useState(initialTodos);
+
+const ProfileView: React.FC<Props> = (props) => {
+  const [todos, setTodos] = useState(props.profile.initialTodos);
 
   const toggleTodo: ToggleTodo = selectedTodo => {
     const newTodos = todos.map(todo => {

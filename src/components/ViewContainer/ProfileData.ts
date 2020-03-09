@@ -15,9 +15,9 @@ export interface ProfileData  {
 const profileData: ProfileData[] = [
     {
         id: 'steampunk',
-        profileImg: '../img/steamFace.png',
-        headerImg: '../img/kugghjul.png',
-        backgroundImg: '../img/steamBG.jpg',
+        profileImg: require('../../img/steamFace.jpg'),
+        headerImg: require('../../img/kugghjul.png'),
+        backgroundImg: require('../../img/steamBG.jpg'),
         alt: 'steampunkProfile',
         initialTodos:   [
             { text:'Putsa Pistolerna', complete: true},
@@ -27,8 +27,8 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'zlatan',
-        profileImg: '../img/zlatan.jpg',
-        headerImg: '../img/milan.jpg',
+        profileImg: require('../../img/zlatan.jpg'),
+        headerImg: require('../../img/milan.jpg'),
         alt: 'zlatanProfile',
         initialTodos:   [
             { text:'Zlatan har inga todos, Zlatan ger todos', complete: true},
@@ -37,8 +37,8 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'nerd',
-        profileImg: '../img/nerd.jpg',
-        headerImg: '../img/nerdBG.jpeg',
+        profileImg: require('../../img/nerd.jpg'),
+        headerImg: require('../../img/nerdBG.jpeg'),
         alt: 'nerdProfile',
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
