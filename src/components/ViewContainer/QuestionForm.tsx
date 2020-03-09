@@ -35,17 +35,17 @@ class QuestionForm extends React.Component<Props, State> {
 
       
     if (this.state.question1 === true && this.state.question2 === false && this.state.question3 === false) {
-      console.log(this.props.onSubmit(profileData[0]))
+      this.props.onSubmit(profileData[0])
       // hämta steampunk från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
     if (this.state.question2 === true ) {
-      console.log(this.props.onSubmit(profileData[1]))
+      this.props.onSubmit(profileData[1])
       // hämta zlatan från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
     if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === true) {
-      console.log(this.props.onSubmit(profileData[2]))
+      this.props.onSubmit(profileData[2])
       // hämta nerd från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
