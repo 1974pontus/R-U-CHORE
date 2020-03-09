@@ -29,9 +29,10 @@ const profileData: ProfileData[] = [
         id: 'zlatan',
         profileImg: '../img/zlatan.jpg',
         headerImg: '../img/milan.jpg',
+        backgroundImg: '../img/zlatanBG.jpg',
         alt: 'zlatanProfile',
         initialTodos:   [
-            { text:'Zlatan har inga todos, Zlatan ger todos', complete: true},
+            { text:'Du har inga todos, du ger todos', complete: true},
             
         ]
     },
@@ -39,6 +40,7 @@ const profileData: ProfileData[] = [
         id: 'nerd',
         profileImg: '../img/nerd.jpg',
         headerImg: '../img/nerdBG.jpeg',
+        backgroundImg: '../img/nerdBG.jpg',
         alt: 'nerdProfile',
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
