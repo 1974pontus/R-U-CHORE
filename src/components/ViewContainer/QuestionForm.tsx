@@ -31,6 +31,15 @@ class QuestionForm extends React.Component<Props, State> {
   handleOnSubmit = (e: FormEvent) => {
     // stoppa form elemtet att uppdatera sidan automatiskt
     e.preventDefault();
+
+      
+    if (this.state.question1 === true) {
+      console.log("zlatan")
+    }
+    else {
+      console.log("steampunk")
+    }
+  
     
     console.log(this.state)
     //TODO: Ta reda på vem man blev
