@@ -1,7 +1,6 @@
 
-
 import React, { useState } from "react";
-import Header from './viewContainer/Header'
+import Header from './viewContainer/Header';
 import Title from './viewContainer/Title';
 import MainView from "./viewContainer/MainView";
 import ProfileImg from "./viewContainer/ProfileImg";
