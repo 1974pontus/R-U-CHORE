@@ -33,23 +33,24 @@ class QuestionForm extends React.Component<Props, State> {
     e.preventDefault();
 
       
-    if (this.state.question1 === true) {
+    if (this.state.question1 === true && this.state.question2 === false && this.state.question3 === false) {
       console.log("steampunk")
-      // hämta zlatan från databasen spara det i state. 
+      // hämta steampunk från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
-    if (this.state.question2 === true) {
+    if (this.state.question2 === true ) {
       console.log("zlatan")
       // hämta zlatan från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
-    if (this.state.question3 === true) {
+    if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === true) {
       console.log("nerd")
-      // hämta zlatan från databasen spara det i state. 
+      // hämta nerd från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
-    else {
-      console.log("LEO")
+    else if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === false)  {
+      //detta händer om man svarar nej på allt. 
+      console.log("U are useless")
     }
   
     
