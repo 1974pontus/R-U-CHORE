@@ -29,9 +29,10 @@ const profileData: ProfileData[] = [
         id: 'zlatan',
         profileImg: require('../../img/zlatan.jpg'),
         headerImg: require('../../img/milan.jpg'),
+        backgroundImg: require('../../img/zlatanBG.jpg'),
         alt: 'zlatanProfile',
         initialTodos:   [
-            { text:'Zlatan har inga todos, Zlatan ger todos', complete: true},
+            { text:'Du har inga todos, du ger todos', complete: true},
             
         ]
     },
@@ -39,6 +40,7 @@ const profileData: ProfileData[] = [
         id: 'nerd',
         profileImg: require('../../img/nerd.jpg'),
         headerImg: require('../../img/nerdBG.jpeg'),
+        backgroundImg: require('../../img/nerdBG.jpg'),
         alt: 'nerdProfile',
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
