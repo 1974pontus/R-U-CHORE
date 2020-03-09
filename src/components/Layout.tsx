@@ -13,7 +13,7 @@ import profileData, { ProfileData } from "./viewContainer/ProfileData";
 
 
 const Layout = () => {
-  const [profile, setProfile] = useState<ProfileData>(profileData[0]);
+  const [profile, setProfile] = useState<ProfileData>(profileData[2]);
 
   const handleProfileSelected = (profile: ProfileData) => {
     setProfile(profile);
@@ -30,7 +30,7 @@ const Layout = () => {
         profile={profile}
       />
       <Title name="Först svara på frågorna:" />
-      <MainView profile={profile}  onProfilSelected={handleProfileSelected} />
+      <MainView profile={profile} onProfilSelected={handleProfileSelected} />
     </React.Fragment>
   );
 };
