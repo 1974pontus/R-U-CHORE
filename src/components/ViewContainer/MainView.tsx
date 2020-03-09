@@ -18,8 +18,9 @@ const MainView = (props: Props) => {
                 <QuestionForm onSubmit={props.onProfilSelected}/>
             </Route>
             <Route path="/profile-view">
-                <ProfileView/>
+                <ProfileView />
             </Route>
+                
             {/* //ett sista alternativ, om ingen av dessa ska väljas. lägg in vad som ska visas här */}
         </Switch>
     )

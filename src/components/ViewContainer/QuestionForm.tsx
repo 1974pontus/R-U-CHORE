@@ -35,29 +35,29 @@ class QuestionForm extends React.Component<Props, State> {
 
       
     if (this.state.question1 === true && this.state.question2 === false && this.state.question3 === false) {
-      console.log("steampunk")
+    this.props.onSubmit(profileData[1])
       // hämta steampunk från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
     if (this.state.question2 === true ) {
-      console.log("zlatan")
+      this.props.onSubmit(profileData[2])
       // hämta zlatan från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
     if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === true) {
-      console.log("nerd")
+      this.props.onSubmit(profileData[3])
       // hämta nerd från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
     else if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === false)  {
       //detta händer om man svarar nej på allt. 
-      console.log("U are useless")
+      this.props.onSubmit(profileData[4])
     }
   
     
-    console.log(this.state)
+   
     //TODO: Ta reda på vem man blev
-    this.props.onSubmit(profileData[0])
+    // this.props.onSubmit(profileData[0])
     this.setState({ shouldRedirect: true })
   };
 

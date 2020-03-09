@@ -3,6 +3,7 @@ import TodoList from "./TodoList";
 import { Todo, ToggleTodo, AddTodo } from "./types";
 import FormField from "./FormField";
 
+
 const initialTodos: Array<Todo> = [
   { text: "Putsa Pistolerna", complete: true },
   { text: "Köpa Höghatt", complete: false },
@@ -34,6 +35,7 @@ const ProfileView: React.FC = () => {
     <div style={liststyling}>
       <React.Fragment>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
+      
         <FormField
           onSubmit={addTodo}
           buttonText="submit"
