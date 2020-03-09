@@ -1,13 +1,13 @@
 import React, { CSSProperties } from 'react';
+import { ProfileData } from './ProfileData';
 
-export interface Props {
-  imageSrc: string,
-  alt: string
+interface Props {
+  profile: ProfileData
 }
 
 function Header(props: Props) {
   return (
-      <img style={header} src={props.imageSrc} alt={props.alt} />);
+      <img style={header} src={props.profile.headerImg} alt={props.profile.alt}/>);
 };
 
 export default Header;
@@ -15,6 +15,5 @@ export default Header;
 const header: CSSProperties = {
     width: '100%',
     height: '15rem',
-    background: 'pink',
     objectFit: 'cover'
 }

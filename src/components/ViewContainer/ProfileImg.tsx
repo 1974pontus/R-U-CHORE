@@ -1,12 +1,12 @@
 import React, { CSSProperties } from "react";
+import { ProfileData } from "./ProfileData";
 
-export interface Props {
-  imageSrc: string,
-  alt: string
+interface Props {
+  profile: ProfileData
 }
 
 function ProfileImg(props: Props) {
-  return <img style={profile} src={props.imageSrc} alt={props.alt} />;
+  return <img style={profile} src={props.profile.profileImg} alt={props.profile.alt} />;
 }
 
 export default ProfileImg;

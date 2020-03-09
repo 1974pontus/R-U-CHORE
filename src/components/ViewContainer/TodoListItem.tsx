@@ -8,13 +8,13 @@ interface TodoListItemProps {
 
 const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo }) => {
   const completed: CSSProperties = {
-    textDecoration: 'line-through',
-    color: '#cdcdcd',
-    fontStyle: 'italic'
-  }
+    textDecoration: "line-through",
+    color: "#cdcdcd",
+    fontStyle: "italic"
+  };
   return (
     <li style={{ listStyleType: "none" }}>
-      <label style={todo.complete ? completed: undefined}>
+      <label style={todo.complete ? completed : undefined}>
         <input
           type="checkbox"
           checked={todo.complete}
@@ -25,6 +25,5 @@ const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo }) => {
     </li>
   );
 };
-
 
 export default TodoListItem;

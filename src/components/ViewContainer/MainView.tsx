@@ -2,10 +2,11 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import QuestionForm from "./QuestionForm";
 import ProfileView from './ProfileView';
+import { ProfileData } from './ProfileData';
 
 
 interface Props {
-    onProfilSelected: (profile: string) => void
+    onProfilSelected: (profile: ProfileData) => void
 }
 
 const MainView = (props: Props) => {
