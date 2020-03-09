@@ -33,11 +33,24 @@ class QuestionForm extends React.Component<Props, State> {
     e.preventDefault();
 
       
-    if (this.state.question1 === true) {
-      console.log("zlatan")
-    }
-    else {
+    if (this.state.question1 === true && this.state.question2 === false && this.state.question3 === false) {
       console.log("steampunk")
+      // hämta steampunk från databasen spara det i state. 
+      //skicka state till layout och profileview.
+    }
+    if (this.state.question2 === true ) {
+      console.log("zlatan")
+      // hämta zlatan från databasen spara det i state. 
+      //skicka state till layout och profileview.
+    }
+    if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === true) {
+      console.log("nerd")
+      // hämta nerd från databasen spara det i state. 
+      //skicka state till layout och profileview.
+    }
+    else if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === false)  {
+      //detta händer om man svarar nej på allt. 
+      console.log("U are useless")
     }
   
     
@@ -56,7 +69,7 @@ class QuestionForm extends React.Component<Props, State> {
 
     return (
       <form onSubmit={this.handleOnSubmit}>
-        <p>Här ska fråga nummer ett vara</p>
+        <p>Gillar du fushion?</p>
         <input
           type="radio"
           id="Q1Yes"
@@ -73,7 +86,7 @@ class QuestionForm extends React.Component<Props, State> {
         <label htmlFor="Q1No">Nej</label>
         <br />
 
-        <p>Här ska fråga nummer två vara</p>
+        <p>Gillar du att vara i centrum?</p>
         <input
           type="radio"
           id="Q2Yes"
@@ -90,7 +103,7 @@ class QuestionForm extends React.Component<Props, State> {
         <label htmlFor="Q2No">Nej</label>
         <br />
 
-        <p>Här ska fråga nummer tre vara</p>
+        <p>Har du sett alla Star Wars filmer?</p>
         <input
           type="radio"
           id="Q3Yes"
