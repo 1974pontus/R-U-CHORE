@@ -13,7 +13,7 @@ import profileData, { ProfileData } from "./viewContainer/ProfileData";
 
 
 const Layout = () => {
-  const [profile, setProfile] = useState<ProfileData>(profileData[2]);
+  const [profile, setProfile] = useState<ProfileData>(profileData[0]);
 
   const handleProfileSelected = (profile: ProfileData) => {
     setProfile(profile);

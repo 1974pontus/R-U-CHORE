@@ -19,8 +19,8 @@ export interface ProfileData  {
 const profileData: ProfileData[] = [
     {
         id: 'mainView',
-        profileImg: '../img/Leonardo-Dicaprio.png',
-        headerImg: '../img/space.png',
+        profileImg: require('../../img/Leonardo-Dicaprio.jpg'),
+        headerImg: require('../../img/space.jpg'),
         alt: 'Leonardo Dicaprio',
         style: {},
         titel: 'Svara på frågorna nedan',
