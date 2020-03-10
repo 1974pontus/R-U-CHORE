@@ -6,6 +6,7 @@ interface Todo  {
 export interface ProfileData  {
     id: string
     profileImg?: string
+    profileText?: string
     headerImg?: string
     backgroundImg?: string
     alt: string
@@ -17,8 +18,9 @@ export interface ProfileData  {
 const profileData: ProfileData[] = [
     {
         id: 'mainView',
-        profileImg: require('../../img/Leonardo-Dicaprio.jpg'),
-        headerImg: require('../../img/UnknownBG.jpg'),
+        profileImg: require('../../img/black.jpg'),
+        profileText: 'R U CHORE?',
+        headerImg: require('../../img/unknownBG.jpg'),
         alt: 'Unknown person',
         titel: 'Svara på frågorna nedan',
         initialTodos: []
