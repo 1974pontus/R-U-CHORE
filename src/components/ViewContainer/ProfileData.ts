@@ -18,8 +18,8 @@ const profileData: ProfileData[] = [
     {
         id: 'mainView',
         profileImg: require('../../img/Leonardo-Dicaprio.jpg'),
-        headerImg: require('../../img/space.jpg'),
-        alt: 'Leonardo Dicaprio',
+        headerImg: require('../../img/UnknownBG.jpg'),
+        alt: 'Unknown person',
         titel: 'Svara på frågorna nedan',
         initialTodos: []
     },{
