@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import TodoList from "./TodoList";
 import { ToggleTodo, AddTodo } from "./types";
 import FormField from "./FormField";
-import profileData, { ProfileData } from "./ProfileData";
+import { ProfileData } from "./ProfileData";
+
 
 interface Props {
   profile: ProfileData

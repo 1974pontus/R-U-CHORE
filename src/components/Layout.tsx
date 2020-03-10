@@ -6,6 +6,7 @@ import ProfileImg from "./viewContainer/ProfileImg";
 import profileData, { ProfileData } from "./viewContainer/ProfileData";
 
 
+
 //tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
 /* import Footer from "./ViewContainer/Footer";
 <Footer buttontext="klar" inputplaceholder="hej"></Footer>  */
@@ -23,6 +24,7 @@ const Layout = () => {
   console.log(profile);
 
   return (
+    
     <React.Fragment>
       <ProfileImg profile={profile}
       />

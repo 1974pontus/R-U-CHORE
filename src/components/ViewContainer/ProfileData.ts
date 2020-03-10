@@ -1,4 +1,5 @@
 import { CSSProperties } from "react"
+import steambackground from '../../img/steamBG.jpg'
 
 interface Todo  {
     text: string,
@@ -32,9 +33,11 @@ const profileData: ProfileData[] = [
         alt: 'steampunkProfile',
         style: {
             marginTop: "7rem",
-            fontSize: "30px",
+            fontSize: "1.8rem",
             fontFamily: "monospace",
-            backgroundImage: 'url../../img/steamBG.jpg',
+            backgroundImage: `url(${ steambackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
           },
         titel: 'Hello steampunker',
         initialTodos:   [
