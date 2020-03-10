@@ -34,6 +34,7 @@ const ProfileView: React.FC<Props> = (props) => {
     <div style={liststyling}>
       <React.Fragment>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
+      
         <FormField
           onSubmit={addTodo}
           buttonText="submit"

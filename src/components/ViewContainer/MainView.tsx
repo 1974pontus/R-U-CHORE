@@ -22,6 +22,7 @@ const MainView = (props: Props) => {
             <Route path="/profile-view">
                 <ProfileView profile={props.profile}/>
             </Route>
+                
             {/* //ett sista alternativ, om ingen av dessa ska väljas. lägg in vad som ska visas här */}
         </Switch>
     )
