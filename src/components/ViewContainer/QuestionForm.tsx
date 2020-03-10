@@ -35,7 +35,7 @@ class QuestionForm extends React.Component<Props, State> {
 
       
     if (this.state.question1 === true && this.state.question2 === false && this.state.question3 === false) {
-    this.props.onSubmit(profileData[1])
+      this.props.onSubmit(profileData[1])
       // hämta steampunk från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
@@ -54,10 +54,10 @@ class QuestionForm extends React.Component<Props, State> {
       this.props.onSubmit(profileData[4])
     }
   
-    
-   
+    console.log(profileData)
+    /* console.log(this.state)
     //TODO: Ta reda på vem man blev
-    // this.props.onSubmit(profileData[0])
+    this.props.onSubmit(profileData[0]) */
     this.setState({ shouldRedirect: true })
   };
 
