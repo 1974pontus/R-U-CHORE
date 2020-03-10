@@ -1,5 +1,9 @@
 import { CSSProperties } from "react"
 import steambackground from '../../img/steamBG.jpg'
+import zlatanbackground from '../../img/zlatanBG.jpg'
+import nerdbackground from '../../img/nerdBG.jpg'
+import uselessbackground from '../../img/completely_useless.png'
+
 
 interface Todo  {
     text: string,
@@ -56,7 +60,7 @@ const profileData: ProfileData[] = [
             fontSize: "1.8rem",
             fontFamily: "roboto",
             color: "pink",
-            backgroundImage: 'url../../img/zlatanBG.jpg',
+            backgroundImage: `url(${ zlatanbackground })`,
           },
         titel: 'You do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
@@ -75,7 +79,7 @@ const profileData: ProfileData[] = [
             fontSize: "1.8rem",
             fontFamily: "arial",
             color: "green",
-            backgroundImage: 'url../../img/nerdBG.jpg',
+            backgroundImage: `url(${ nerdbackground })`,
           },
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
@@ -88,7 +92,7 @@ const profileData: ProfileData[] = [
         titel: 'Pass on what you have learned',
         alt: 'quote from the tv-serie friends',
         style: {
-            backgroundImage: 'url../../img/completely_useless.png',
+            backgroundImage: `url(${ uselessbackground })`,
         },
         initialTodos: []
     }
