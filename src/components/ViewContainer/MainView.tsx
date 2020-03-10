@@ -8,6 +8,7 @@ import { ProfileData } from "./ProfileData";
 
 interface Props {
     onProfilSelected: (profile: ProfileData) => void
+    profile: ProfileData
 }
 
 const MainView = (props: Props) => {
@@ -19,7 +20,7 @@ const MainView = (props: Props) => {
                 <QuestionForm onSubmit={props.onProfilSelected}/>
             </Route>
             <Route path="/profile-view">
-                <ProfileView/>
+                <ProfileView profile={props.profile}/>
             </Route>
             {/* //ett sista alternativ, om ingen av dessa ska väljas. lägg in vad som ska visas här */}
         </Switch>

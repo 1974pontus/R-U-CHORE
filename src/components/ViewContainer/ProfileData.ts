@@ -15,9 +15,9 @@ export interface ProfileData  {
 const profileData: ProfileData[] = [
     {
         id: 'steampunk',
-        profileImg: '../img/steamFace.png',
-        headerImg: '../img/kugghjul.png',
-        backgroundImg: '../img/steamBG.jpg',
+        profileImg: require('../../img/steamFace.jpg'),
+        headerImg: require('../../img/kugghjul.png'),
+        backgroundImg: require('../../img/steamBG.jpg'),
         alt: 'steampunkProfile',
         initialTodos:   [
             { text:'Putsa Pistolerna', complete: true},
@@ -27,9 +27,9 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'zlatan',
-        profileImg: '../img/zlatan.jpg',
-        headerImg: '../img/milan.jpg',
-        backgroundImg: '../img/zlatanBG.jpg',
+        profileImg: require('../../img/zlatan.jpg'),
+        headerImg: require('../../img/milan.jpg'),
+        backgroundImg: require('../../img/zlatanBG.jpg'),
         alt: 'zlatanProfile',
         initialTodos:   [
             { text:'Du har inga todos, du ger todos', complete: true},
@@ -38,9 +38,9 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'nerd',
-        profileImg: '../img/nerd.jpg',
-        headerImg: '../img/nerdBG.jpeg',
-        backgroundImg: '../img/nerdBG.jpg',
+        profileImg: require('../../img/nerd.jpg'),
+        headerImg: require('../../img/nerdBG.jpeg'),
+        backgroundImg: require('../../img/nerdBG.jpg'),
         alt: 'nerdProfile',
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
