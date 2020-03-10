@@ -1,3 +1,5 @@
+import { CSSProperties } from "react"
+
 interface Todo  {
     text: string,
     complete: boolean
@@ -8,8 +10,8 @@ export interface ProfileData  {
     profileImg?: string
     profileText?: string
     headerImg?: string
-    backgroundImg?: string
     alt: string
+    style: CSSProperties
     titel: string
     initialTodos: Array<Todo>
    
@@ -22,14 +24,20 @@ const profileData: ProfileData[] = [
         profileText: 'R U CHORE?',
         headerImg: require('../../img/unknownBG.jpg'),
         alt: 'Unknown person',
+        style: {},
         titel: 'Svara på frågorna nedan',
         initialTodos: []
     },{
         id: 'steampunk',
         profileImg: require('../../img/steamFace.jpg'),
         headerImg: require('../../img/kugghjul.png'),
-        backgroundImg: require('../../img/steamBG.jpg'),
         alt: 'steampunkProfile',
+        style: {
+            marginTop: "7rem",
+            fontSize: "30px",
+            fontFamily: "monospace",
+            backgroundImage: 'url../../img/steamBG.jpg',
+          },
         titel: 'Hello steampunker',
         initialTodos:   [
             { text:'Putsa Pistolerna', complete: true},
@@ -41,8 +49,14 @@ const profileData: ProfileData[] = [
         id: 'zlatan',
         profileImg: require('../../img/zlatan.jpg'),
         headerImg: require('../../img/milan.jpg'),
-        backgroundImg: require('../../img/zlatanBG.jpg'),
         alt: 'zlatanProfile',
+        style: {
+            marginTop: "7rem",
+            fontSize: "1.8rem",
+            fontFamily: "roboto",
+            color: "pink",
+            backgroundImage: 'url../../img/zlatanBG.jpg',
+          },
         titel: 'You do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
             { text:'Du har inga todos, du ger todos', complete: true},
@@ -53,9 +67,15 @@ const profileData: ProfileData[] = [
         id: 'nerd',
         profileImg: require('../../img/nerd.jpg'),
         headerImg: require('../../img/nerdBG.jpeg'),
-        backgroundImg: require('../../img/nerdBG.jpg'),
         alt: 'nerdProfile',
         titel: 'Pass on what you have learned',
+        style: {
+            marginTop: "7rem",
+            fontSize: "1.8rem",
+            fontFamily: "arial",
+            color: "green",
+            backgroundImage: 'url../../img/nerdBG.jpg',
+          },
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
             { text: 'Månadens dusch', complete: false},
@@ -64,9 +84,11 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'usless',
-        backgroundImg: require('../../img/completely_useless.png'),
         titel: 'Pass on what you have learned',
         alt: 'quote from the tv-serie friends',
+        style: {
+            backgroundImage: 'url../../img/completely_useless.png',
+        },
         initialTodos: []
     }
 ]
