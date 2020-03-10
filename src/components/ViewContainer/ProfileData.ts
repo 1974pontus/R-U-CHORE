@@ -21,7 +21,7 @@ const profileData: ProfileData[] = [
         headerImg: require('../../img/space.jpg'),
         alt: 'Leonardo Dicaprio',
         titel: 'Svara på frågorna nedan',
-        initialTodos: []
+        initialTodos: [],
     },{
         id: 'steampunk',
         profileImg: require('../../img/steamFace.jpg'),
