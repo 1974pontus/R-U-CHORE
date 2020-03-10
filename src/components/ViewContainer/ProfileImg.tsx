@@ -23,7 +23,6 @@ const profile: CSSProperties = {
     top: '15rem',
     transform: 'translate(-50%, -50%)',
     backgroundColor: 'black',
-    border: '.05rem solid grey'
 }
 
 
@@ -35,7 +34,7 @@ const text: CSSProperties = {
   top: '15rem',
   transform: 'translate(-50%, -50%)',
   textAlign: 'center',
-  color: 'white',
+  color: 'black',
   fontWeight: 'bold',
   
 }
