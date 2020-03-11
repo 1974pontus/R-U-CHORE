@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, CSSProperties } from "react";
 import Header from "./viewContainer/Header";
 import Title from "./viewContainer/Title";
 import MainView from "./viewContainer/MainView";
@@ -23,7 +23,7 @@ const Layout = () => {
   console.log(profile);
 
   return (
-    
+   <div style={ content }>
     <div style={profile.style}>
       <ProfileImg profile={profile}
       />
@@ -33,16 +33,17 @@ const Layout = () => {
       <Title name="Först svara på frågorna:" />
       <MainView profile={profile} onProfilSelected={handleProfileSelected} />
     </div>
+    </div> 
   );
 };
 
 export default Layout;
 
-// const marginbottom: CSSProperties = {
-//   marginBottom: '6rem',
-//   textAlign: 'center',
-//   color: 'white'
-// }
+const content: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100vh'
+}
 
 // const todolist: CSSProperties = {
 //   margin: '2rem 0  0 5rem',

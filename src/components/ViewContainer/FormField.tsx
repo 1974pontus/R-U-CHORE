@@ -63,7 +63,6 @@ const footerContainer: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
-  marginBottom: "0.4rem"
 };
 
 const inputField: CSSProperties = {

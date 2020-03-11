@@ -38,9 +38,9 @@ const profileData: ProfileData[] = [
         headerImg: require('../../img/kugghjul.png'),
         alt: 'steampunkProfile',
         style: {
-            height: "100%",
+            height: "100vh",
             fontSize: "1.8rem",
-            fontFamily: "monospace",
+            fontFamily: "luminari",
             backgroundImage: `url(${ steambackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -63,6 +63,8 @@ const profileData: ProfileData[] = [
             fontFamily: "roboto",
             color: "pink",
             backgroundImage: `url(${ zlatanbackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
           },
         titel: 'You do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
@@ -73,7 +75,7 @@ const profileData: ProfileData[] = [
     {
         id: 'nerd',
         profileImg: require('../../img/nerd.jpg'),
-        headerImg: require('../../img/nerdBG.jpeg'),
+        headerImg: require('../../img/nerdHeadBG.jpeg'),
         alt: 'nerdProfile',
         titel: 'Pass on what you have learned',
         style: {
@@ -82,6 +84,8 @@ const profileData: ProfileData[] = [
             fontFamily: "arial",
             color: "green",
             backgroundImage: `url(${ nerdbackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
           },
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
@@ -96,6 +100,8 @@ const profileData: ProfileData[] = [
         style: {
             height: '100%',
             backgroundImage: `url(${ uselessbackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
         },
         initialTodos: []
     }
