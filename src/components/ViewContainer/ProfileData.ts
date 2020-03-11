@@ -13,6 +13,7 @@ interface Todo  {
 export interface ProfileData  {
     id: string
     profileImg?: string
+    profileText?: string
     headerImg?: string
     alt: string
     style: CSSProperties
@@ -24,9 +25,11 @@ export interface ProfileData  {
 const profileData: ProfileData[] = [
     {
         id: 'mainView',
-        profileImg: require('../../img/Leonardo-Dicaprio.jpg'),
-        headerImg: require('../../img/space.jpg'),
-        alt: 'Leonardo Dicaprio',
+
+        profileImg: require('../../img/maincircle.jpg'),
+        profileText: 'R U CHORE?',
+        headerImg: require('../../img/UnknownBG.jpg'),
+        alt: 'Unknown person',
         style: {
             height: '100%'
         },
