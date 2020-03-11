@@ -1,4 +1,9 @@
 import { CSSProperties } from "react"
+import steambackground from '../../img/steamBG.jpg'
+import zlatanbackground from '../../img/zlatanBG.jpg'
+import nerdbackground from '../../img/nerdBG.jpg'
+import uselessbackground from '../../img/completely_useless.png'
+
 
 interface Todo  {
     text: string,
@@ -20,23 +25,28 @@ export interface ProfileData  {
 const profileData: ProfileData[] = [
     {
         id: 'mainView',
+
         profileImg: require('../../img/maincircle.jpg'),
         profileText: 'R U CHORE?',
         headerImg: require('../../img/UnknownBG.jpg'),
         alt: 'Unknown person',
-        style: {},
+        style: {
+            height: '100%'
+        },
         titel: 'Svara på frågorna nedan',
-        initialTodos: []
+        initialTodos: [],
     },{
         id: 'steampunk',
         profileImg: require('../../img/steamFace.jpg'),
         headerImg: require('../../img/kugghjul.png'),
         alt: 'steampunkProfile',
         style: {
-            marginTop: "7rem",
-            fontSize: "30px",
-            fontFamily: "monospace",
-            backgroundImage: 'url../../img/steamBG.jpg',
+            height: "100vh",
+            fontSize: "1.8rem",
+            fontFamily: "luminari",
+            backgroundImage: `url(${ steambackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
           },
         titel: 'Hello steampunker',
         initialTodos:   [
@@ -51,11 +61,13 @@ const profileData: ProfileData[] = [
         headerImg: require('../../img/milan.jpg'),
         alt: 'zlatanProfile',
         style: {
-            marginTop: "7rem",
+            height: "100%",
             fontSize: "1.8rem",
             fontFamily: "roboto",
             color: "pink",
-            backgroundImage: 'url../../img/zlatanBG.jpg',
+            backgroundImage: `url(${ zlatanbackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
           },
         titel: 'You do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
@@ -66,15 +78,17 @@ const profileData: ProfileData[] = [
     {
         id: 'nerd',
         profileImg: require('../../img/nerd.jpg'),
-        headerImg: require('../../img/nerdBG.jpeg'),
+        headerImg: require('../../img/nerdHeadBG.jpeg'),
         alt: 'nerdProfile',
         titel: 'Pass on what you have learned',
         style: {
-            marginTop: "7rem",
+            height: "100%",
             fontSize: "1.8rem",
             fontFamily: "arial",
             color: "green",
-            backgroundImage: 'url../../img/nerdBG.jpg',
+            backgroundImage: `url(${ nerdbackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
           },
         initialTodos:   [
             { text:'Köpa Powerking', complete: true},
@@ -87,7 +101,10 @@ const profileData: ProfileData[] = [
         titel: 'Pass on what you have learned',
         alt: 'quote from the tv-serie friends',
         style: {
-            backgroundImage: 'url../../img/completely_useless.png',
+            height: '100%',
+            backgroundImage: `url(${ uselessbackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
         },
         initialTodos: []
     }

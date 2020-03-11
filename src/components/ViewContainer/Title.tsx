@@ -15,7 +15,7 @@ export default Title;
 
 
 const title: CSSProperties = {
-marginTop: '10rem',
+marginTop: '5rem',
 textAlign: 'center',
 width: '100%'
 }
