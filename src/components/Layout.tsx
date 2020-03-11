@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, CSSProperties } from "react";
 import Header from "./viewContainer/Header";
 import Title from "./viewContainer/Title";
 import MainView from "./viewContainer/MainView";
@@ -42,22 +42,27 @@ const Layout = (props: Props) => {
    }, )
 
   return (
-    <React.Fragment>
-      <ProfileImg profile={profile} />
-      <Header profile={profile} />
+   <div style={ content }>
+    <div style={profile.style}>
+      <ProfileImg profile={profile}
+      />
+      <Header
+        profile={profile}
+      />
       <Title name="Först svara på frågorna:" />
       <MainView profile={profile} onProfilSelected={handleProfileSelected} />
-    </React.Fragment>
+    </div>
+    </div> 
   );
 };
 
 export default withRouter(Layout);
 
-// const marginbottom: CSSProperties = {
-//   marginBottom: '6rem',
-//   textAlign: 'center',
-//   color: 'white'
-// }
+const content: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100vh'
+}
 
 // const todolist: CSSProperties = {
 //   margin: '2rem 0  0 5rem',

@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import TodoList from "./TodoList";
 import { ToggleTodo, AddTodo } from "./types";
 import FormField from "./FormField";
-import  { ProfileData } from "./ProfileData";
-
+import { ProfileData } from "./ProfileData";
 
 
 interface Props {
@@ -35,11 +34,6 @@ const ProfileView: React.FC<Props> = (props) => {
   // let profile: {this.props.onSubmit(profileData[0]}
 
   return (
-  
-   
-
-    <div style={props.profile.style}>
- 
       <React.Fragment>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
       
@@ -50,11 +44,8 @@ const ProfileView: React.FC<Props> = (props) => {
         />
       
       </React.Fragment>
-    </div>
-  
   );
 };
 
 
 export default ProfileView;
-
