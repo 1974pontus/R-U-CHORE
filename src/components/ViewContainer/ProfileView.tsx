@@ -32,7 +32,6 @@ const ProfileView: React.FC<Props> = (props) => {
   };
 
   return (
-    <div style={props.profile.style}>
       <React.Fragment>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
       
@@ -42,7 +41,6 @@ const ProfileView: React.FC<Props> = (props) => {
           placeHolder="Add your todos"
         />
       </React.Fragment>
-    </div>
   );
 };
 

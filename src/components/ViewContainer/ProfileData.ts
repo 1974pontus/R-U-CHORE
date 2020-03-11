@@ -27,7 +27,9 @@ const profileData: ProfileData[] = [
         profileImg: require('../../img/Leonardo-Dicaprio.jpg'),
         headerImg: require('../../img/space.jpg'),
         alt: 'Leonardo Dicaprio',
-        style: {},
+        style: {
+            height: '100%'
+        },
         titel: 'Svara på frågorna nedan',
         initialTodos: [],
     },{
@@ -36,7 +38,7 @@ const profileData: ProfileData[] = [
         headerImg: require('../../img/kugghjul.png'),
         alt: 'steampunkProfile',
         style: {
-            marginTop: "7rem",
+            height: "100%",
             fontSize: "1.8rem",
             fontFamily: "monospace",
             backgroundImage: `url(${ steambackground })`,
@@ -56,7 +58,7 @@ const profileData: ProfileData[] = [
         headerImg: require('../../img/milan.jpg'),
         alt: 'zlatanProfile',
         style: {
-            marginTop: "7rem",
+            height: "100%",
             fontSize: "1.8rem",
             fontFamily: "roboto",
             color: "pink",
@@ -75,7 +77,7 @@ const profileData: ProfileData[] = [
         alt: 'nerdProfile',
         titel: 'Pass on what you have learned',
         style: {
-            marginTop: "7rem",
+            height: "100%",
             fontSize: "1.8rem",
             fontFamily: "arial",
             color: "green",
@@ -92,6 +94,7 @@ const profileData: ProfileData[] = [
         titel: 'Pass on what you have learned',
         alt: 'quote from the tv-serie friends',
         style: {
+            height: '100%',
             backgroundImage: `url(${ uselessbackground })`,
         },
         initialTodos: []
