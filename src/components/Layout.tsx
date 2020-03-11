@@ -17,6 +17,11 @@ import { withRouter, RouteComponentProps } from "react-router-dom";
 // react-router-dom and is used to setState that is the inicial page [0]
 type Props = RouteComponentProps
 
+// class Layout extends React.Component {
+//   constructor(props: Props) {
+//     super(props);
+//     this.state = { profileData[0] };
+//   }
 
 const Layout = (props: Props) => {
   const [profile, setProfile] = useState<ProfileData>(profileData[0]);
