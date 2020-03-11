@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import QuestionForm from "./QuestionForm";
 import ProfileView from './ProfileView';
 import { ProfileData } from "./ProfileData";
+import LinkButton from './LinkButton';
 
 
 
@@ -20,6 +21,7 @@ const MainView = (props: Props) => {
                 <QuestionForm onSubmit={props.onProfilSelected}/>
             </Route>
             <Route path="/profile-view">
+                <LinkButton />
                 <ProfileView profile={props.profile}/>
             </Route>
                 

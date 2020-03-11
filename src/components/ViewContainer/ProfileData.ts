@@ -19,7 +19,6 @@ export interface ProfileData  {
     style: CSSProperties
     titel: string
     initialTodos: Array<Todo>
-   
 }
 
 const profileData: ProfileData[] = [

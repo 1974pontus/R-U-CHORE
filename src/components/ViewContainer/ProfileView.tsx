@@ -31,6 +31,8 @@ const ProfileView: React.FC<Props> = (props) => {
       setTodos([...todos, { text: newTodo, complete: false }]);
   };
 
+  // let profile: {this.props.onSubmit(profileData[0]}
+
   return (
       <React.Fragment>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
@@ -40,6 +42,7 @@ const ProfileView: React.FC<Props> = (props) => {
           buttonText="submit"
           placeHolder="Add your todos"
         />
+      
       </React.Fragment>
   );
 };
