@@ -22,7 +22,7 @@ const profileData: ProfileData[] = [
         id: 'mainView',
         profileImg: require('../../img/maincircle.jpg'),
         profileText: 'R U CHORE?',
-        headerImg: require('../../img/unknownBG.jpg'),
+        headerImg: require('../../img/UnknownBG.jpg'),
         alt: 'Unknown person',
         style: {},
         titel: 'Svara på frågorna nedan',
