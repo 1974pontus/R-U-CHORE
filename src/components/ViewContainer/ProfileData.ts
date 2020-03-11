@@ -7,13 +7,12 @@ interface Todo  {
 
 export interface ProfileData  {
     id: string
-    profileImg?: string
-    headerImg?: string
+    profileImg?: string | undefined
+    headerImg?: string | undefined
     alt: string
     style: CSSProperties
     titel: string
     initialTodos: Array<Todo>
-   
 }
 
 const profileData: ProfileData[] = [

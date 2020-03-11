@@ -1,10 +1,7 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, CSSProperties } from "react";
 import { Redirect } from 'react-router-dom'
-// import { CSSProperties } from "react";
 import FormField from "./FormField";
 import profileData, { ProfileData } from "./ProfileData";
-
-
 
 interface Props {
   onSubmit: (profil: ProfileData) => void;
@@ -44,7 +41,7 @@ class QuestionForm extends React.Component<Props, State> {
       // hämta zlatan från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
-    if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === true) {
+    if (this.state.question2 === false && this.state.question3 === true) {
       this.props.onSubmit(profileData[3])
       // hämta nerd från databasen spara det i state. 
       //skicka state till layout och profileview.
@@ -69,6 +66,7 @@ class QuestionForm extends React.Component<Props, State> {
 
 
     return (
+      <div style={questionForm}>
       <form onSubmit={this.handleOnSubmit}>
         <p>Gillar du fushion?</p>
         <input
@@ -120,20 +118,22 @@ class QuestionForm extends React.Component<Props, State> {
         />
         <label htmlFor="Q3No">Nej</label>
         <br />
+        <br />
         <FormField
           onChange={(name) => this.setState({ name })}
           buttonText="Submit"
           placeHolder="What´s your name?"
         />
       </form>
+      </div>
     );
   }
 }
 
-// const questionForm: CSSProperties = {
-//   marginTop: "4rem",
-//   textAlign: "center",
-//   width: "100%"
-// };
+const questionForm: CSSProperties = {
+  marginTop: "2rem",
+  textAlign: "center",
+  width: "100%"
+};
 
 export default QuestionForm;
