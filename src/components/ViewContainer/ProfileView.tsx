@@ -35,7 +35,7 @@ const ProfileView: React.FC<Props> = (props) => {
 
   return (
       <React.Fragment>
-        <Title titleContent="Detta är dina Todos:" />
+        <Title titleContent={props.profile.titel}/>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
       
         <FormField

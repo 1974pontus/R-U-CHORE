@@ -1,10 +1,10 @@
 import React, {CSSProperties} from 'react';
 
-interface Props{
+interface titleProps{
 titleContent: string
 }
 
-export class Title extends React.Component<Props> {
+export class Title extends React.Component<titleProps> {
 
 render() {
   return (
@@ -17,7 +17,7 @@ export default Title;
 
 
 const style: CSSProperties = {
-marginTop: '5rem',
+marginTop: '7rem',
 textAlign: 'center',
 width: '100%'
 }
