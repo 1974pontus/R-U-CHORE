@@ -21,7 +21,6 @@ const MainView = (props: Props) => {
                 <QuestionForm onSubmit={props.onProfilSelected}/>
             </Route>
             <Route path="/profile-view">
-                <LinkButton />
                 <ProfileView profile={props.profile}/>
             </Route>
                 

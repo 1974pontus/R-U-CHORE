@@ -5,6 +5,7 @@ import MainView from "./viewContainer/MainView";
 import ProfileImg from "./viewContainer/ProfileImg";
 import profileData, { ProfileData } from "./viewContainer/ProfileData";
 import { withRouter, RouteComponentProps } from "react-router-dom";
+import LinkButton from "./viewContainer/LinkButton";
 
 
 
@@ -49,6 +50,7 @@ const Layout = (props: Props) => {
       <Header
         profile={profile}
       />
+      <LinkButton />
       <Title name="Först svara på frågorna:" />
       <MainView profile={profile} onProfilSelected={handleProfileSelected} />
     </div>
