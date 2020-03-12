@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 function LinkButton() {
     return (
-        <Link style={showButton} to="/">
-            Home
+        <Link to="/">
+            <button style={showButton}>Home</button>
         </Link>
     )
 
@@ -16,16 +16,14 @@ function LinkButton() {
 export default LinkButton
 
 const showButton: CSSProperties = {
-    display: "flex",
-    alignItems: "end",
-    justifyContent: "end",
     textAlign: "center",
     padding: "0.5rem",
     background: "black",
-    color: "white",
+    color: "#c7dbfa",
     fontSize: "0.7rem",
-    width: "4rem",
-    height: "3rem",
+    border: "none",
     outline: "0",
-    cursor: "pointer"
+    cursor: "pointer",
+    float: "right",
+    marginRight: "1rem"
   }
