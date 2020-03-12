@@ -13,7 +13,7 @@ const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo }) => {
     fontStyle: "italic"
   };
   return (
-    <li style={{ listStyleType: "none" }}>
+    <li >
       <label style={todo.complete ? completed : undefined}>
         <input
           type="checkbox"
