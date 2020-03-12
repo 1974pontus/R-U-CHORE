@@ -4,6 +4,7 @@ import MainView from "./viewContainer/MainView";
 import ProfileImg from "./viewContainer/ProfileImg";
 import profileData, { ProfileData } from "./viewContainer/ProfileData";
 import { withRouter, RouteComponentProps } from "react-router-dom";
+import LinkButton from "./viewContainer/LinkButton";
 
 //David visade
 // this RouteComponentProps is imported from 
@@ -43,6 +44,7 @@ const Layout = (props: Props) => {
       <Header
         profile={profile}
       />
+      <LinkButton />
       <MainView profile={profile} onProfilSelected={handleProfileSelected} />
     </div>
     </div> 
