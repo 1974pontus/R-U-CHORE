@@ -61,7 +61,7 @@ const profileData: ProfileData[] = [
         alt: 'zlatanProfile',
         style: {
             height: "100%",
-            fontSize: "1.8rem",
+            fontSize: "1rem",
             fontFamily: "roboto",
             color: "pink",
             backgroundImage: `url(${ zlatanbackground })`,

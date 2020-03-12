@@ -16,11 +16,16 @@ function LinkButton() {
 export default LinkButton
 
 const showButton: CSSProperties = {
+    display: "flex",
+    alignItems: "end",
+    justifyContent: "end",
     textAlign: "center",
-    width: "2rem",
-    height: '2rem',
-    backgroundColor: 'pink',
-    color: 'white',
-    display:'flex',
-    justifyContent: 'flexStart'
+    padding: "0.5rem",
+    background: "black",
+    color: "white",
+    fontSize: "0.7rem",
+    width: "4rem",
+    height: "3rem",
+    outline: "0",
+    cursor: "pointer"
   }

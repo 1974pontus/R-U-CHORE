@@ -63,12 +63,16 @@ const footerContainer: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
+  position: "absolute",
+  bottom: "0",
+  paddingBottom: "1rem"
 };
 
 const inputField: CSSProperties = {
-  padding: "1rem",
+  padding: "1.1rem",
   outline: "0",
-  color: "blue"
+  backgroundColor: "#c7dbfa",
+  border:"none"
 };
 
 const mainButton: CSSProperties = {
@@ -83,5 +87,6 @@ const mainButton: CSSProperties = {
   width: "4rem",
   height: "3rem",
   outline: "0",
-  cursor: "pointer"
+  cursor: "pointer",
+  border: "none"
 };
