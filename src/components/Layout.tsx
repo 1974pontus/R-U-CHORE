@@ -1,6 +1,5 @@
 import React, { useState, useEffect, CSSProperties } from "react";
 import Header from "./viewContainer/Header";
-import Title from "./viewContainer/Title";
 import MainView from "./viewContainer/MainView";
 import ProfileImg from "./viewContainer/ProfileImg";
 import profileData, { ProfileData } from "./viewContainer/ProfileData";
@@ -49,7 +48,6 @@ const Layout = (props: Props) => {
       <Header
         profile={profile}
       />
-      <Title name="Först svara på frågorna:" />
       <MainView profile={profile} onProfilSelected={handleProfileSelected} />
     </div>
     </div> 
