@@ -68,7 +68,7 @@ class QuestionForm extends React.Component<Props, State> {
 
     return (
       <div style={questionForm}>
-      <Title titleContent="Först svara på frågorna:" />
+      <Title titleContent="Först svara på frågorna:"/>
       <form onSubmit={this.handleOnSubmit}>
         <p>Gillar du fusion?</p>
         <input
