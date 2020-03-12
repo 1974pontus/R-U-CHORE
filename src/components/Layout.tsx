@@ -9,7 +9,10 @@ import LinkButton from "./viewContainer/LinkButton";
 //David visade
 // this RouteComponentProps is imported from 
 // react-router-dom and is used to setState that is the inicial page [0]
-type Props = RouteComponentProps
+type Props = RouteComponentProps 
+
+
+
 
 // class Layout extends React.Component {
 //   constructor(props: Props) {
@@ -23,6 +26,7 @@ const Layout = (props: Props) => {
   const handleProfileSelected = (profile: ProfileData) => {
     setProfile(profile);
   };
+
   
   /* Klicka på submit-knappen och du får profilen loggad i consolen */
   //console.log(profile)
