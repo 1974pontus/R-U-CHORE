@@ -1,7 +1,7 @@
 import { CSSProperties } from "react"
 import steambackground from '../../img/steamBG.jpg'
 import zlatanbackground from '../../img/zlatanBG.jpg'
-import nerdbackground from '../../img/nerdBG.jpg'
+import nerdbackground from '../../img/darth.jpg'
 import uselessbackground from '../../img/completely_useless.png'
 
 
@@ -76,8 +76,8 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'nerd',
-        profileImg: require('../../img/nerd.jpg'),
-        headerImg: require('../../img/nerdHeadBG.jpeg'),
+        profileImg: require('../../img/wizard.jpg'),
+        headerImg: require('../../img/forestnerd.jpg'),
         alt: 'nerdProfile',
         titel: 'Pass on what you have learned',
         style: {
