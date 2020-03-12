@@ -5,12 +5,6 @@ import ProfileImg from "./viewContainer/ProfileImg";
 import profileData, { ProfileData } from "./viewContainer/ProfileData";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 
-
-
-//tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
-/* import Footer from "./ViewContainer/Footer";
-<Footer buttontext="klar" inputplaceholder="hej"></Footer>  */
-
 //David visade
 // this RouteComponentProps is imported from 
 // react-router-dom and is used to setState that is the inicial page [0]
@@ -30,7 +24,8 @@ const Layout = (props: Props) => {
   };
   
   /* Klicka på submit-knappen och du får profilen loggad i consolen */
-  
+  //console.log(profile)
+
   //This is allows us to make the LinkButton clear and 
   //go back to profileData[0]
    useEffect(() => {
