@@ -2,6 +2,7 @@ import React, { FormEvent, CSSProperties } from "react";
 import { Redirect } from 'react-router-dom'
 import FormField from "./FormField";
 import profileData, { ProfileData } from "./ProfileData";
+import Title from "./Title";
 
 interface Props {
   onSubmit: (profil: ProfileData) => void;
@@ -67,8 +68,9 @@ class QuestionForm extends React.Component<Props, State> {
 
     return (
       <div style={questionForm}>
+      <Title titleContent="Först svara på frågorna:" />
       <form onSubmit={this.handleOnSubmit}>
-        <p>Gillar du fushion?</p>
+        <p>Gillar du fusion?</p>
         <input
           type="radio"
           id="Q1Yes"

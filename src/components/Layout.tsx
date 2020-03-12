@@ -1,17 +1,10 @@
 import React, { useState, useEffect, CSSProperties } from "react";
 import Header from "./viewContainer/Header";
-import Title from "./viewContainer/Title";
 import MainView from "./viewContainer/MainView";
 import ProfileImg from "./viewContainer/ProfileImg";
 import profileData, { ProfileData } from "./viewContainer/ProfileData";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import LinkButton from "./viewContainer/LinkButton";
-
-
-
-//tagit bort footer från layout, footer ligger i MainView och ska läggas in i PofileView?/AddTodoForm?
-/* import Footer from "./ViewContainer/Footer";
-<Footer buttontext="klar" inputplaceholder="hej"></Footer>  */
 
 //David visade
 // this RouteComponentProps is imported from 
@@ -32,7 +25,8 @@ const Layout = (props: Props) => {
   };
   
   /* Klicka på submit-knappen och du får profilen loggad i consolen */
-  
+  //console.log(profile)
+
   //This is allows us to make the LinkButton clear and 
   //go back to profileData[0]
    useEffect(() => {
@@ -51,7 +45,6 @@ const Layout = (props: Props) => {
         profile={profile}
       />
       <LinkButton />
-      <Title name="Först svara på frågorna:" />
       <MainView profile={profile} onProfilSelected={handleProfileSelected} />
     </div>
     </div> 
