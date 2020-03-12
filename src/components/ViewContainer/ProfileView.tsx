@@ -3,7 +3,7 @@ import TodoList from "./TodoList";
 import { ToggleTodo, AddTodo } from "./types";
 import FormField from "./FormField";
 import { ProfileData } from "./ProfileData";
-
+import Title from "./Title"
 
 interface Props {
   profile: ProfileData
@@ -35,6 +35,7 @@ const ProfileView: React.FC<Props> = (props) => {
 
   return (
       <React.Fragment>
+        <Title titleContent="Detta är dina Todos:" />
         <TodoList todos={todos} toggleTodo={toggleTodo} />
       
         <FormField

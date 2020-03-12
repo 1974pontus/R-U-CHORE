@@ -1,20 +1,22 @@
 import React, {CSSProperties} from 'react';
 
 interface Props{
-name: string
-
+titleContent: string
 }
 
-const Title = (props: Props) => {
+export class Title extends React.Component<Props> {
+
+render() {
   return (
-  <h3 style={title}>{props.name}</h3>
+  <h3 style={style}>{this.props.titleContent}</h3>
   );
 };
+}
 
 export default Title;
 
 
-const title: CSSProperties = {
+const style: CSSProperties = {
 marginTop: '5rem',
 textAlign: 'center',
 width: '100%'
