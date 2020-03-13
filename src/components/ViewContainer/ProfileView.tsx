@@ -7,6 +7,7 @@ import Title from "./Title";
 
 interface Props {
   profile: ProfileData;
+  name: string
 }
 
 const ProfileView: React.FC<Props> = props => {
@@ -34,7 +35,8 @@ const ProfileView: React.FC<Props> = props => {
 
   return (
     <React.Fragment>
-      <Title titleContent={props.profile.titel} />
+      {/* <h1>{props.name}</h1> */}
+      <Title name={props.name} titleContent={props.profile.titel} />
       <TodoList 
         todos={todos} 
         toggleTodo={toggleTodo}
