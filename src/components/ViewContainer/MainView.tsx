@@ -8,20 +8,20 @@ import { ProfileData } from "./ProfileData";
 
 
 interface Props {
-    onProfilSelected: (profile: ProfileData) => void
+    onProfilSelected: (profile: ProfileData, name: string) => void
     profile: ProfileData
+    name: string
 }
 
 const MainView = (props: Props) => {
 
-    
     return (
         <Switch>
             <Route exact path="/">
                 <QuestionForm onSubmit={props.onProfilSelected}/>
             </Route>
             <Route path="/profile-view">
-                <ProfileView profile={props.profile}/>
+                <ProfileView name={props.name} profile={props.profile}/>
             </Route>
                 
             {/* //ett sista alternativ, om ingen av dessa ska väljas. lägg in vad som ska visas här */}

@@ -3,14 +3,14 @@ import TodoList from "./TodoList";
 import { ToggleTodo, AddTodo } from "./types";
 import FormField from "./FormField";
 import { ProfileData } from "./ProfileData";
-import Title from "./Title"
+import Title from "./Title";
 
 interface Props {
-  profile: ProfileData
+  profile: ProfileData;
+  name: string
 }
 
-
-const ProfileView: React.FC<Props> = (props) => {
+const ProfileView: React.FC<Props> = props => {
   const [todos, setTodos] = useState(props.profile.initialTodos);
 
   const toggleTodo: ToggleTodo = selectedTodo => {
@@ -34,19 +34,21 @@ const ProfileView: React.FC<Props> = (props) => {
   // let profile: {this.props.onSubmit(profileData[0]}
 
   return (
-      <React.Fragment>
-        <Title titleContent={props.profile.titel}/>
-        <TodoList todos={todos} toggleTodo={toggleTodo} />
-      
-        <FormField
-          onSubmit={addTodo}
-          buttonText="submit"
-          placeHolder="Add your todos"
-        />
-      
-      </React.Fragment>
+    <React.Fragment>
+      {/* <h1>{props.name}</h1> */}
+      <Title name={props.name} titleContent={props.profile.titel} />
+      <TodoList 
+        todos={todos} 
+        toggleTodo={toggleTodo}
+      />
+
+      <FormField
+        onSubmit={addTodo}
+        buttonText="submit"
+        placeHolder="Add your todos"
+      />
+    </React.Fragment>
   );
 };
-
 
 export default ProfileView;

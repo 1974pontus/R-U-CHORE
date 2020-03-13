@@ -22,9 +22,11 @@ type Props = RouteComponentProps
 
 const Layout = (props: Props) => {
   const [profile, setProfile] = useState<ProfileData>(profileData[0]);
+  const [name, setName] = useState<string>("");
 
-  const handleProfileSelected = (profile: ProfileData) => {
+  const handleProfileSelected = (profile: ProfileData, name: string) => {
     setProfile(profile);
+    setName(name)
   };
 
   
@@ -49,7 +51,7 @@ const Layout = (props: Props) => {
         profile={profile}
       />
       <LinkButton />
-      <MainView profile={profile} onProfilSelected={handleProfileSelected} />
+      <MainView profile={profile} name={name} onProfilSelected={handleProfileSelected} />
     </div>
     </div> 
   );
@@ -64,6 +66,4 @@ const content: CSSProperties = {
   position: "relative"
 }
 
-// const todolist: CSSProperties = {
-//   margin: '2rem 0  0 5rem',
-//  }
+

@@ -5,7 +5,7 @@ import profileData, { ProfileData } from "./ProfileData";
 import Title from "./Title";
 
 interface Props {
-  onSubmit: (profil: ProfileData) => void;
+  onSubmit: (profil: ProfileData, name: string) => void;
   onChange?: boolean;
   answer?: string;
 }
@@ -33,23 +33,23 @@ class QuestionForm extends React.Component<Props, State> {
 
       
     if (this.state.question1 === true && this.state.question2 === false && this.state.question3 === false) {
-      this.props.onSubmit(profileData[1])
+      this.props.onSubmit(profileData[1], this.state.name)
       // hämta steampunk från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
     if (this.state.question2 === true ) {
-      this.props.onSubmit(profileData[2])
+      this.props.onSubmit(profileData[2], this.state.name)
       // hämta zlatan från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
     if (this.state.question2 === false && this.state.question3 === true) {
-      this.props.onSubmit(profileData[3])
+      this.props.onSubmit(profileData[3], this.state.name)
       // hämta nerd från databasen spara det i state. 
       //skicka state till layout och profileview.
     }
     else if (this.state.question1 === false && this.state.question2 === false && this.state.question3 === false)  {
       //detta händer om man svarar nej på allt. 
-      this.props.onSubmit(profileData[4])
+      this.props.onSubmit(profileData[4], this.state.name)
     }
   
     console.log(profileData)

@@ -36,12 +36,12 @@ const profileData: ProfileData[] = [
         initialTodos: [],
     },{
         id: 'steampunk',
-        profileImg: require('../../img/steamFace.jpg'),
+        profileImg: require('../../img/steamFace2.jpg'),
         headerImg: require('../../img/kugghjul.png'),
         alt: 'steampunkProfile',
         style: {
             height: "100vh",
-            fontSize: "1.8rem",
+            fontSize: "1.5rem",
             fontFamily: "luminari",
             backgroundImage: `url(${ steambackground })`,
             backgroundPosition: 'center',
