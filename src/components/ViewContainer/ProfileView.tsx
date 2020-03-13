@@ -6,7 +6,7 @@ import { ProfileData } from "./ProfileData";
 import Title from "./Title";
 
 interface Props {
-  profile: ProfileData;
+  profile: ProfileData
   name: string
 }
 

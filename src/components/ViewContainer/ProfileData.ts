@@ -68,7 +68,7 @@ const profileData: ProfileData[] = [
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           },
-        titel: 'You do not need a trophy to tell yourself that you are the best. ',
+        titel: 'do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
             { text:'Du har inga todos, du ger todos', complete: true},
             
