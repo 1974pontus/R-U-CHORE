@@ -30,6 +30,8 @@ const profileData: ProfileData[] = [
         headerImg: require('../../img/UnknownBG.jpg'),
         alt: 'Unknown person',
         style: {
+            fontSize: "1.2rem",
+            fontFamily: 'arial',
             height: '100%'
         },
         titel: 'Svara på frågorna nedan',
@@ -61,7 +63,7 @@ const profileData: ProfileData[] = [
         alt: 'zlatanProfile',
         style: {
             height: "100%",
-            fontSize: "1rem",
+            fontSize: "1.5rem",
             fontFamily: "roboto",
             color: "pink",
             backgroundImage: `url(${ zlatanbackground })`,
@@ -82,7 +84,7 @@ const profileData: ProfileData[] = [
         titel: 'Pass on what you have learned',
         style: {
             height: "100%",
-            fontSize: "1.8rem",
+            fontSize: "1.5rem",
             fontFamily: "arial",
             color: "green",
             backgroundImage: `url(${ nerdbackground })`,

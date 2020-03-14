@@ -135,7 +135,8 @@ class QuestionForm extends React.Component<Props, State> {
 const questionForm: CSSProperties = {
   marginTop: "2rem",
   textAlign: "center",
-  width: "100%"
+  width: "100%",
+  fontFamily: "arial"
 };
 
 export default QuestionForm;
