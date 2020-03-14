@@ -43,7 +43,7 @@ const profileData: ProfileData[] = [
         alt: 'steampunkProfile',
         style: {
             height: "100vh",
-            fontSize: "1.5rem",
+            fontSize: "1.2rem",
             fontFamily: "luminari",
             backgroundImage: `url(${ steambackground })`,
             backgroundPosition: 'center',
@@ -63,7 +63,7 @@ const profileData: ProfileData[] = [
         alt: 'zlatanProfile',
         style: {
             height: "100%",
-            fontSize: "1.5rem",
+            fontSize: "1.2rem",
             fontFamily: "roboto",
             color: "pink",
             backgroundImage: `url(${ zlatanbackground })`,
@@ -84,7 +84,7 @@ const profileData: ProfileData[] = [
         titel: 'Pass on what you have learned',
         style: {
             height: "100%",
-            fontSize: "1.5rem",
+            fontSize: "1.2rem",
             fontFamily: "arial",
             color: "green",
             backgroundImage: `url(${ nerdbackground })`,
