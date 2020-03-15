@@ -5,9 +5,10 @@ import { Todo, ToggleTodo } from "./types";
 interface TodoListProps {
   todos: Array<Todo>;
   toggleTodo: ToggleTodo;
+  handleTodoRemove: (text: string) => void;
 }
 
-const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
+const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, handleTodoRemove }) => {
   return (
     <div style={{display: "flex", justifyContent: "center"}}>
     <ul style={centerTodos} >
@@ -16,7 +17,8 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo }) => {
         <TodoListItem 
           key={todo.text} 
           todo={todo} 
-          toggleTodo={toggleTodo} 
+          toggleTodo={toggleTodo}
+          handleTodoRemove={handleTodoRemove} 
         />
         )
       })}
