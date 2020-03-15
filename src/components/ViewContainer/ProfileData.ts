@@ -97,8 +97,9 @@ const profileData: ProfileData[] = [
             { text: 'Säga till mamma att tvätta', complete: false},
         ]
     },
+    
     {
-        id: 'usless',
+        id: 'computer',
         profileImg: require('../../img/computer_no.jpg'),
         headerImg: require('../../img/computer_no_header.png'),
         alt: 'Little Britain Carol, computer says no',
