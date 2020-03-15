@@ -70,7 +70,7 @@ class QuestionForm extends React.Component<Props, State> {
       <div style={questionForm}>
       <Title titleContent="Först svara på frågorna:"/>
       <form onSubmit={this.handleOnSubmit}>
-        <p>Gillar du fusion?</p>
+        <p>Gillar du filmen Wild Wild West med Will Smith?</p>
         <input
           type="radio"
           id="Q1Yes"
