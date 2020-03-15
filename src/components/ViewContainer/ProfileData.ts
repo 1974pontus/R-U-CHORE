@@ -2,7 +2,7 @@ import { CSSProperties } from "react"
 import steambackground from '../../img/steamBG.jpg'
 import zlatanbackground from '../../img/zlatanBG.jpg'
 import nerdbackground from '../../img/darth.jpg'
-import uselessbackground from '../../img/completely_useless.png'
+
 
 
 interface Todo  {
@@ -101,7 +101,7 @@ const profileData: ProfileData[] = [
     {
         id: 'computer',
         profileImg: require('../../img/computer_no.jpg'),
-        headerImg: require('../../img/computer_no_header.png'),
+        headerImg: require('../../img/office-80s.jpg'),
         alt: 'Little Britain Carol, computer says no',
         titel: ',computer says no',
         style: {
