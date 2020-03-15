@@ -99,16 +99,18 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'usless',
-        titel: 'Pass on what you have learned',
-        alt: 'quote from the tv-serie friends',
+        profileImg: require('../../img/computer_no.jpg'),
+        headerImg: require('../../img/computer_no_header.png'),
+        alt: 'Little Britain Carol, computer says no',
+        titel: ',computer says no',
         style: {
-            height: '100%',
-            backgroundImage: `url(${ uselessbackground })`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
+           backgroundColor: '#fafcee',
+           height: '100%'
         },
-        initialTodos: []
-    }
+        initialTodos: [
+            { text: 'Say NO', complete: true}
+        ]
+    },
 ]
 
 
