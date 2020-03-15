@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TodoList from "./TodoList";
-import { ToggleTodo, AddTodo } from "./types";
+import { ToggleTodo, AddTodo, Todo } from "./types";
 import FormField from "./FormField";
 import { ProfileData } from "./ProfileData";
 import Title from "./Title";
@@ -31,6 +31,11 @@ const ProfileView: React.FC<Props> = props => {
       setTodos([...todos, { text: newTodo, complete: false }]);
   };
 
+  function handleTodoRemove(text: string) {
+    const newTodos: Todo[] = todos.filter((todo: Todo) => todo.text !== text)
+    setTodos(newTodos)
+  }
+
   // let profile: {this.props.onSubmit(profileData[0]}
 
   return (
@@ -40,7 +45,9 @@ const ProfileView: React.FC<Props> = props => {
       <TodoList 
         todos={todos} 
         toggleTodo={toggleTodo}
-      />
+        handleTodoRemove={handleTodoRemove}
+        />
+        
 
       <FormField
         onSubmit={addTodo}
