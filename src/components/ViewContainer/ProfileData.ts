@@ -1,8 +1,9 @@
 import { CSSProperties } from "react"
 import steambackground from '../../img/steamBG.jpg'
-import zlatanbackground from '../../img/zlatanBG.jpg'
+import zlatanbackground from '../../img/zlatan_bg.png'
 import nerdbackground from '../../img/darth.jpg'
 import uselessbackground from '../../img/completely_useless.png'
+
 
 
 interface Todo  {
@@ -58,13 +59,13 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'zlatan',
-        profileImg: require('../../img/zlatan.jpg'),
-        headerImg: require('../../img/milan.jpg'),
+        profileImg: require('../../img/world-cup-trophy.png'),
+        headerImg: require('../../img/zlatan_header.png'),
         alt: 'zlatanProfile',
         style: {
             height: "100%",
             fontSize: "1.2rem",
-            fontFamily: "roboto",
+            fontFamily: "'Lobster', cursive;",
             color: "pink",
             backgroundImage: `url(${ zlatanbackground })`,
             backgroundPosition: 'center',
