@@ -36,10 +36,11 @@ const profileData: ProfileData[] = [
             fontFamily: 'arial',
             color: 'white',
             textShadow: '0 0 3px #000000, 0 0 5px #000000',
-            height: '100%',
+            height: '100vh',
             backgroundImage: `url(${ mainviewbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            overflow: 'scroll'
         },
         titel: 'Svara på frågorna nedan',
         initialTodos: [],
@@ -57,6 +58,7 @@ const profileData: ProfileData[] = [
             backgroundImage: `url(${ steambackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            overflow: 'scroll'
           },
         titel: ', dina goggles är nyputsade och lädret är brunt.',
         initialTodos:   [
@@ -71,7 +73,7 @@ const profileData: ProfileData[] = [
         headerImg: require('../../img/zlatan_header.png'),
         alt: 'zlatanProfile',
         style: {
-            height: "100%",
+            height: "100vh",
             fontSize: "1.2rem",
             fontFamily: 'Raleway, sans-serif',
             color: "rgb(254, 204, 0)",
@@ -79,6 +81,7 @@ const profileData: ProfileData[] = [
             backgroundImage: `url(${ zlatanbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            overflow: 'scroll'
           },
         titel: ' do not need a trophy to tell yourself that you are the best.',
         initialTodos:   [
@@ -93,13 +96,14 @@ const profileData: ProfileData[] = [
         alt: 'nerdProfile',
         titel: '! Do or do not, there is no try.',
         style: {
-            height: "100%",
+            height: "100vh",
             fontSize: "1.2rem",
             fontFamily: "arial",
             color: "#00FF00",
             backgroundImage: `url(${ nerdbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            overflow: 'scroll'
           },
         initialTodos:   [
             { text:'Köpa Powerking', complete: false},
@@ -116,9 +120,10 @@ const profileData: ProfileData[] = [
         titel: ',computer says no',
         style: {
            backgroundColor: '#fafcee',
-           height: '100%',
+           height: '100vh',
            color: 'black',
            textShadow: 'none',
+           overflow: 'scroll'
         },
         initialTodos: [
             { text: 'Say NO', complete: true}
