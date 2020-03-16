@@ -2,7 +2,7 @@ import { CSSProperties } from "react"
 import steambackground from '../../img/steamBG.jpg'
 import zlatanbackground from '../../img/zlatanBG.jpg'
 import nerdbackground from '../../img/darth.jpg'
-import uselessbackground from '../../img/completely_useless.png'
+
 
 
 interface Todo  {
@@ -97,18 +97,21 @@ const profileData: ProfileData[] = [
             { text: 'Säga till mamma att tvätta', complete: false},
         ]
     },
+    
     {
-        id: 'usless',
-        titel: 'Pass on what you have learned',
-        alt: 'quote from the tv-serie friends',
+        id: 'computer',
+        profileImg: require('../../img/computer_no.jpg'),
+        headerImg: require('../../img/office-80s.jpg'),
+        alt: 'Little Britain Carol, computer says no',
+        titel: ',computer says no',
         style: {
-            height: '100%',
-            backgroundImage: `url(${ uselessbackground })`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
+           backgroundColor: '#fafcee',
+           height: '100%'
         },
-        initialTodos: []
-    }
+        initialTodos: [
+            { text: 'Say NO', complete: true}
+        ]
+    },
 ]
 
 
