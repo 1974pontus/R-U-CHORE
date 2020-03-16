@@ -123,8 +123,8 @@ class QuestionForm extends React.Component<Props, State> {
         <br />
         <FormField
           onChange={(name) => this.setState({ name })}
-          buttonText="Submit"
-          placeHolder="What´s your name?"
+          buttonText="Done"
+          placeHolder="Type your name..."
         />
       </form>
       </div>
@@ -133,7 +133,7 @@ class QuestionForm extends React.Component<Props, State> {
 }
 
 const questionForm: CSSProperties = {
-  marginTop: "2rem",
+  marginTop: '2rem',
   textAlign: "center",
   width: "100%",
   fontFamily: "arial"
