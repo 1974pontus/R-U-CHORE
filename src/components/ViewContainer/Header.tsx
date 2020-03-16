@@ -15,5 +15,5 @@ export default Header;
 const header: CSSProperties = {
     width: '100%',
     height: '15rem',
-    objectFit: 'cover'
+    objectFit: 'cover',
 }

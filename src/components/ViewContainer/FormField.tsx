@@ -63,8 +63,8 @@ const footerContainer: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
-  position: "sticky",
-  bottom: "0",
+  /* position: "sticky", */
+  /* bottom: "0", */
   paddingBottom: "1rem"
 };
 

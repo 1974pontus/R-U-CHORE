@@ -20,7 +20,7 @@ const profile: CSSProperties = {
     position: 'absolute',
     borderRadius: '50%',
     left: '50%',
-    top: '15rem',
+    top: '0rem',
     transform: 'translate(-50%, -50%)',
 }
 
@@ -30,7 +30,7 @@ const text: CSSProperties = {
   position: 'absolute',
   borderRadius: '50%',
   left: '50%',
-  top: '15rem',
+  top: '0rem',
   transform: 'translate(-50%, -50%)',
   textAlign: 'center',
   color: 'black',
