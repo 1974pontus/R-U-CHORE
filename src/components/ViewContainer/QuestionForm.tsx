@@ -70,73 +70,92 @@ class QuestionForm extends React.Component<Props, State> {
       <div style={questionForm}>
       <Title titleContent="Först svara på frågorna:"/>
       <form onSubmit={this.handleOnSubmit}>
+        
         <p>Gillar du filmen Wild Wild West med Will Smith?</p>
+        <label htmlFor="Q1Yes">Ja</label>
         <input
+          style={styleRadioButtonYes}
           type="radio"
           id="Q1Yes"
           name="question1"
           onChange={(e) => this.setState({ question1: e.target.checked })}
         />
-        <label htmlFor="Q1Yes">Ja</label>
+        <label htmlFor="Q1No">Nej</label>
         <input
+          style={styleRadioButtonNo}
           type="radio"
           id="Q1No"
           name="question1"
           onChange={(e) => this.setState({ question1: !e.target.checked })}
         />
-        <label htmlFor="Q1No">Nej</label>
         <br />
 
         <p>Gillar du att vara i centrum?</p>
+        <label htmlFor="Q2Yes">Ja</label>
         <input
+          style={styleRadioButtonYes}
           type="radio"
           id="Q2Yes"
           name="question2"
           onChange={(e) => this.setState({ question2: e.target.checked })}
         />
-        <label htmlFor="Q2Yes">Ja</label>
-        <input
+         <label htmlFor="Q2No">Nej</label>
+         <input
+          style={styleRadioButtonNo}
           type="radio"
           id="Q2No"
           name="question2"
           onChange={(e) => this.setState({ question2: !e.target.checked })}
         />
-        <label htmlFor="Q2No">Nej</label>
         <br />
 
         <p>Har du sett alla Star Wars filmer?</p>
+        <label htmlFor="Q3Yes">Ja</label>
         <input
+          style={styleRadioButtonYes}
           type="radio"
           id="Q3Yes"
           name="question3"
           onChange={(e) => this.setState({ question3: e.target.checked })}
         />
-        <label htmlFor="Q3Yes">Ja</label>
+        <label htmlFor="Q3No">Nej</label>
         <input
+          style={styleRadioButtonNo}
           type="radio"
           id="Q3No"
           name="question3"
           onChange={(e) => this.setState({ question3: !e.target.checked })}
         />
-        <label htmlFor="Q3No">Nej</label>
         <br />
         <br />
+       
         <FormField
           onChange={(name) => this.setState({ name })}
-          buttonText="Submit"
-          placeHolder="What´s your name?"
+          buttonText="Done"
+          placeHolder="Type your name..."
         />
       </form>
-      </div>
+       </div>
     );
+    
   }
 }
 
 const questionForm: CSSProperties = {
-  marginTop: "2rem",
-  textAlign: "center",
+  marginTop: '2rem',
   width: "100%",
+  textAlign: 'center',
   fontFamily: "arial"
 };
+
+const styleRadioButtonYes: CSSProperties = {
+  margin: '0 4rem 0 .35rem',
+  verticalAlign: '.1rem'
+}
+
+const styleRadioButtonNo: CSSProperties = {
+  margin: '0 0 0 .35rem',
+  verticalAlign: '.1rem'
+}
 
 export default QuestionForm;

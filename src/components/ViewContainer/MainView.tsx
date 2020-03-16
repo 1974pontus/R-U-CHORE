@@ -6,6 +6,7 @@ import profileData, { ProfileData } from "./ProfileData";
 import ProfileImg from './ProfileImg';
 import Header from './Header';
 import LinkButton from './LinkButton';
+import { CSSProperties } from '@material-ui/core/styles/withStyles';
 
 
 
@@ -45,4 +46,6 @@ const MainView = (props: Props) => {
     )
 }
 
+
 export default MainView
+
