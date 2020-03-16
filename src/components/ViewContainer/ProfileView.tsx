@@ -5,6 +5,7 @@ import FormField from "./FormField";
 import { ProfileData } from "./ProfileData";
 import Title from "./Title";
 
+
 interface Props {
   profile: ProfileData
   name: string
@@ -42,6 +43,14 @@ const ProfileView: React.FC<Props> = props => {
     <React.Fragment>
       {/* <h1>{props.name}</h1> */}
       <Title name={props.name} titleContent={props.profile.titel} />
+    
+      
+      <FormField
+        onSubmit={addTodo}
+        buttonText="submit"
+        placeHolder="Add your todos"
+      />
+
       <TodoList 
         todos={todos} 
         toggleTodo={toggleTodo}

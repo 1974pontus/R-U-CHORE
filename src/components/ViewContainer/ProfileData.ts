@@ -5,8 +5,6 @@ import nerdbackground from '../../img/darth.jpg'
 import mainviewbackground from '../../img/space.jpg'
 import './fonts.css'
 
-
-
 interface Todo  {
     text: string,
     complete: boolean
