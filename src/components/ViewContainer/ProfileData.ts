@@ -1,9 +1,11 @@
 import { CSSProperties } from "react"
 import steambackground from '../../img/steamBG.jpg'
-import zlatanbackground from '../../img/zlatanBG.jpg'
+import zlatanbackground from '../../img/zlatan_bg.png'
 import nerdbackground from '../../img/darth.jpg'
-import uselessbackground from '../../img/completely_useless.png'
 import mainviewbackground from '../../img/space.jpg'
+import './fonts.css'
+
+
 
 interface Todo  {
     text: string,
@@ -56,28 +58,28 @@ const profileData: ProfileData[] = [
           },
         titel: 'Hello steampunker',
         initialTodos:   [
-            { text:'Putsa Pistolerna', complete: true},
+            { text:'Putsa Pistolerna', complete: false},
             { text: 'Köpa Höghatt', complete: false},
             { text: 'Laga fickuret', complete: false},
         ]
     },
     {
         id: 'zlatan',
-        profileImg: require('../../img/zlatan.jpg'),
-        headerImg: require('../../img/milan.jpg'),
+        profileImg: require('../../img/world-cup-trophy.png'),
+        headerImg: require('../../img/zlatan_header.png'),
         alt: 'zlatanProfile',
         style: {
             height: "100%",
             fontSize: "1.2rem",
-            fontFamily: "roboto",
-            color: "pink",
+            fontFamily: 'Raleway, sans-serif',
+            color: "rgb(254, 204, 0)",
             backgroundImage: `url(${ zlatanbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           },
         titel: 'do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
-            { text:'Du har inga todos, du ger todos', complete: true},
+            { text:'Du har inga todos, du ger ut todos', complete: false},
             
         ]
     },
@@ -97,23 +99,26 @@ const profileData: ProfileData[] = [
             backgroundSize: 'cover',
           },
         initialTodos:   [
-            { text:'Köpa Powerking', complete: true},
+            { text:'Köpa Powerking', complete: false},
             { text: 'Månadens dusch', complete: false},
             { text: 'Säga till mamma att tvätta', complete: false},
         ]
     },
+    
     {
-        id: 'usless',
-        titel: 'Pass on what you have learned',
-        alt: 'quote from the tv-serie friends',
+        id: 'computer',
+        profileImg: require('../../img/computer_no.jpg'),
+        headerImg: require('../../img/office-80s.jpg'),
+        alt: 'Little Britain Carol, computer says no',
+        titel: ',computer says no',
         style: {
-            height: '100%',
-            backgroundImage: `url(${ uselessbackground })`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
+           backgroundColor: '#fafcee',
+           height: '100%'
         },
-        initialTodos: []
-    }
+        initialTodos: [
+            { text: 'Say NO', complete: true}
+        ]
+    },
 ]
 
 

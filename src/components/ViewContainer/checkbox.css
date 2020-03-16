@@ -5,13 +5,15 @@
 }
 
 .checkbox > span {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.0rem 2rem;
 }
 
 .checkbox > input {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     appearance: none;
     border: 3px solid #34495E;
     border-radius: 4px;
@@ -19,6 +21,7 @@
     transition-duration: 0.3s;
     background-color: rgba(165, 42, 42, 0.288);
     cursor: pointer;
+    margin-top: 12px;
   }
 
 .checkbox > input:checked {
@@ -32,8 +35,8 @@
     text-align: center;
     color: #34495E;
     position: absolute;
-    left: 0.5rem;
-    top: 0;
+    left: 0.3rem;
+    top: 12px;
 }
 
 .checkbox > input:active {
