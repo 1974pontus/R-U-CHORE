@@ -39,7 +39,7 @@ const MainView = (props: Props) => {
                     <ProfileView name={props.name} profile={props.profile}/>
                 </div>
             </Route>
-                
+         
             {/* //ett sista alternativ, om ingen av dessa ska väljas. lägg in vad som ska visas här */}
         </Switch>
     )
