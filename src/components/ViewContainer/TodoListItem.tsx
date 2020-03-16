@@ -2,7 +2,8 @@ import React, { CSSProperties } from "react";
 import { Todo, ToggleTodo } from "./types";
 import './checkbox.css'
 import IconButton from '@material-ui/core/IconButton';
-import DeleteIcon from '@material-ui/icons/Delete';
+// import DeleteIcon from '@material-ui/icons/Delete';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 interface TodoListItemProps {
   todo: Todo;
@@ -25,13 +26,13 @@ const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo, handleTod
           onChange={() => toggleTodo(todo)}
         />
         <span>{todo.text}</span>
-        <IconButton
-            aria-label="Delete"
+        <IconButton style={ icons }
+            aria-label="HighlightOff"
             onClick={() => {
               handleTodoRemove(todo.text);
             }}
           >
-            <DeleteIcon />
+            <HighlightOffIcon />
           </IconButton>
         {/* <button onClick={() => handleTodoRemove(todo.text)}>X</button> */}
       </label>
@@ -39,7 +40,10 @@ const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleTodo, handleTod
   );
 };
 
+const icons: CSSProperties = {
+  color: 'grey'
 
+}
 
 
 export default TodoListItem;

@@ -52,7 +52,7 @@ const profileData: ProfileData[] = [
           },
         titel: 'Hello steampunker',
         initialTodos:   [
-            { text:'Putsa Pistolerna', complete: true},
+            { text:'Putsa Pistolerna', complete: false},
             { text: 'Köpa Höghatt', complete: false},
             { text: 'Laga fickuret', complete: false},
         ]
@@ -73,7 +73,7 @@ const profileData: ProfileData[] = [
           },
         titel: 'do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
-            { text:'Du har inga todos, du ger ut todos', complete: true},
+            { text:'Du har inga todos, du ger ut todos', complete: false},
             
         ]
     },
@@ -93,7 +93,7 @@ const profileData: ProfileData[] = [
             backgroundSize: 'cover',
           },
         initialTodos:   [
-            { text:'Köpa Powerking', complete: true},
+            { text:'Köpa Powerking', complete: false},
             { text: 'Månadens dusch', complete: false},
             { text: 'Säga till mamma att tvätta', complete: false},
         ]
