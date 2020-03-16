@@ -50,7 +50,7 @@ const profileData: ProfileData[] = [
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           },
-        titel: 'Hello steampunker',
+        titel: 'steampunker',
         initialTodos:   [
             { text:'Putsa Pistolerna', complete: false},
             { text: 'Köpa Höghatt', complete: false},
