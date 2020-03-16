@@ -17,7 +17,6 @@
     width: 20px;
     appearance: none;
     border: 1px solid #c7dbfa;
-    /* border-radius: 4px; */
     outline: 0;
     border: none;
     transition-duration: 0.3s;
@@ -29,7 +28,6 @@
 
 
 .checkbox > input:checked {
-    /* border: 3px solid #34495E; */
     background-color: #c7dbfa;
     animation: back 6s ease-in infinite alternate;
 }

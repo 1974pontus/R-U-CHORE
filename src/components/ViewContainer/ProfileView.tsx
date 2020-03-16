@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ProfileView: React.FC<Props> = props => {
-  const [todos, setTodos] = useState(props.profile.initialTodos);
+const [todos, setTodos] = useState(props.profile.initialTodos);
 
   const toggleTodo: ToggleTodo = selectedTodo => {
     const newTodos = todos.map(todo => {
@@ -37,14 +37,9 @@ const ProfileView: React.FC<Props> = props => {
     setTodos(newTodos)
   }
 
-  // let profile: {this.props.onSubmit(profileData[0]}
-
   return (
     <React.Fragment>
-      {/* <h1>{props.name}</h1> */}
       <Title name={props.name} titleContent={props.profile.titel} />
-    
-      
       <FormField
         onSubmit={addTodo}
         buttonText="submit"
@@ -57,12 +52,6 @@ const ProfileView: React.FC<Props> = props => {
         handleTodoRemove={handleTodoRemove}
         />
         
-
-      <FormField
-        onSubmit={addTodo}
-        buttonText="submit"
-        placeHolder="Add your todos"
-      />
     </React.Fragment>
   );
 };

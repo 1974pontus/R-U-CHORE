@@ -1,16 +1,13 @@
 import React, { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 
-
 function LinkButton() {
     return (
         <Link to="/">
             <button style={showButton}>Home</button>
         </Link>
     )
-
 }
-
 
 export default LinkButton
 
