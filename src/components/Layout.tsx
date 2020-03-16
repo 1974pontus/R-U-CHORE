@@ -45,7 +45,6 @@ const content: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   height: '100vh',
-  backgroundColor: 'pink'
 }
 
 
