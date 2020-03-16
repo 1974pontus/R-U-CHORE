@@ -149,12 +149,12 @@ const questionForm: CSSProperties = {
 };
 
 const styleRadioButtonYes: CSSProperties = {
-  margin: '-1rem 3rem 0 .3rem',
+  margin: '0 4rem 0 .35rem',
   verticalAlign: '.1rem'
 }
 
 const styleRadioButtonNo: CSSProperties = {
-  margin: '0 0 0 .3rem',
+  margin: '0 0 0 .35rem',
   verticalAlign: '.1rem'
 }
 
