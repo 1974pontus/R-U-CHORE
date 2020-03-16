@@ -3,6 +3,7 @@ import steambackground from '../../img/steamBG.jpg'
 import zlatanbackground from '../../img/zlatan_bg.png'
 import nerdbackground from '../../img/darth.jpg'
 import uselessbackground from '../../img/completely_useless.png'
+import './fonts.css'
 
 
 
@@ -65,15 +66,15 @@ const profileData: ProfileData[] = [
         style: {
             height: "100%",
             fontSize: "1.2rem",
-            fontFamily: "'Lobster', cursive;",
-            color: "pink",
+            fontFamily: 'Raleway, sans-serif',
+            color: "rgb(254, 204, 0)",
             backgroundImage: `url(${ zlatanbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           },
         titel: 'do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
-            { text:'Du har inga todos, du ger todos', complete: true},
+            { text:'Du har inga todos, du ger ut todos', complete: true},
             
         ]
     },
