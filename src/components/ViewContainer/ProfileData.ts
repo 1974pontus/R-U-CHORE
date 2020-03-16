@@ -2,6 +2,7 @@ import { CSSProperties } from "react"
 import steambackground from '../../img/steamBG.jpg'
 import zlatanbackground from '../../img/zlatan_bg.png'
 import nerdbackground from '../../img/darth.jpg'
+import mainviewbackground from '../../img/space.jpg'
 import './fonts.css'
 
 
@@ -33,7 +34,12 @@ const profileData: ProfileData[] = [
         style: {
             fontSize: "1.2rem",
             fontFamily: 'arial',
-            height: '100%'
+            color: 'white',
+            textShadow: '0 0 3px #000000, 0 0 5px #000000',
+            height: '100%',
+            backgroundImage: `url(${ mainviewbackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
         },
         titel: 'Svara på frågorna nedan',
         initialTodos: [],
@@ -46,11 +52,13 @@ const profileData: ProfileData[] = [
             height: "100vh",
             fontSize: "1.2rem",
             fontFamily: "luminari",
+            color: 'black',
+            textShadow: 'none',
             backgroundImage: `url(${ steambackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           },
-        titel: 'Dina goggles är nyputsade och lädret är brunt!',
+        titel: ', dina goggles är nyputsade och lädret är brunt.',
         initialTodos:   [
             { text:'Putsa Pistolerna', complete: false},
             { text: 'Köpa Höghatt', complete: false},
@@ -67,11 +75,12 @@ const profileData: ProfileData[] = [
             fontSize: "1.2rem",
             fontFamily: 'Raleway, sans-serif',
             color: "rgb(254, 204, 0)",
+            textShadow: 'none',
             backgroundImage: `url(${ zlatanbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           },
-        titel: 'do not need a trophy to tell yourself that you are the best. ',
+        titel: ' do not need a trophy to tell yourself that you are the best.',
         initialTodos:   [
             { text:'Du har inga todos, du ger ut todos', complete: false},
             
@@ -82,12 +91,12 @@ const profileData: ProfileData[] = [
         profileImg: require('../../img/wizard.jpg'),
         headerImg: require('../../img/forestnerd.jpg'),
         alt: 'nerdProfile',
-        titel: 'Pass on what you have learned',
+        titel: '! Do or do not, there is no try.',
         style: {
             height: "100%",
             fontSize: "1.2rem",
             fontFamily: "arial",
-            color: "green",
+            color: "#00FF00",
             backgroundImage: `url(${ nerdbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',

@@ -16,18 +16,17 @@ export default ProfileImg;
 
 
 const profile: CSSProperties = {
-    width: '20%',
+    width: '13rem',
     position: 'absolute',
     borderRadius: '50%',
     left: '50%',
     top: '15rem',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: 'black',
 }
 
 
 const text: CSSProperties = {
-  width: '20%',
+  width: '13rem',
   position: 'absolute',
   borderRadius: '50%',
   left: '50%',
@@ -36,6 +35,8 @@ const text: CSSProperties = {
   textAlign: 'center',
   color: 'black',
   fontWeight: 'bold',
+  fontSize: '2.7rem',
+  padding: '0 0 1rem 0'
   
 }
 
