@@ -5,6 +5,7 @@ interface Props {
   profile: ProfileData
 }
 
+//gets props from profile data
 function Header(props: Props) {
   return (
       <img style={header} src={props.profile.headerImg} alt={props.profile.alt}/>);

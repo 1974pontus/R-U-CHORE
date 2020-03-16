@@ -63,9 +63,8 @@ const footerContainer: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
-  /* position: "sticky", */
-  /* bottom: "0", */
-  paddingBottom: "1rem"
+  padding: "1rem",
+  overflowY: 'auto'
 };
 
 const inputField: CSSProperties = {

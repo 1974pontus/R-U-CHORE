@@ -7,10 +7,10 @@ interface Props {
 
 function ProfileImg(props: Props) {
   return <div>
-    <img style={profile} src={props.profile.profileImg} alt={props.profile.alt} />
-    <div style={text}> {props.profile.profileText} </div>
-</div>;
-}
+            <img style={profile} src={props.profile.profileImg} alt={props.profile.alt} />
+            <div style={text}> {props.profile.profileText} </div>
+          </div>;
+  }
 
 export default ProfileImg;
 
@@ -37,7 +37,6 @@ const text: CSSProperties = {
   fontWeight: 'bold',
   fontSize: '2.7rem',
   padding: '0 0 1rem 0'
-  
 }
 
 
