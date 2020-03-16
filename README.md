@@ -1,8 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## R-U Chore?
 
-In the project directory, you can run:
+R-U Chore is basically a Todo-app that gives you a custom design depending on how you answer the questions. R-U Chore will scan your personality and refer you to your true self that comes with some custom chores. Please enjoy and have fun!
+
+❤️ the R-U Chore team
+
+
+## Get started 🚀
+
+### `npm install`
+
+Start by installing and then 👇
 
 ### `npm start`
 
@@ -12,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+<!-- ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -41,4 +49,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React documentation](https://reactjs.org/). -->
