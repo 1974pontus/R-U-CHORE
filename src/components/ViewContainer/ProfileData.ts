@@ -116,7 +116,9 @@ const profileData: ProfileData[] = [
         titel: ',computer says no',
         style: {
            backgroundColor: '#fafcee',
-           height: '100vh'
+           height: '100vh',
+           color: 'black',
+           textShadow: 'none',
         },
         initialTodos: [
             { text: 'Say NO', complete: true}
