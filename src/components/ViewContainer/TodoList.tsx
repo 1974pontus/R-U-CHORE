@@ -6,7 +6,8 @@ interface TodoListProps {
   todos: Array<Todo>;
   toggleTodo: ToggleTodo;
   handleTodoRemove: (text: string) => void;
-}
+  };
+
 
 const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, handleTodoRemove }) => {
   return (
@@ -22,8 +23,6 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, handleTodoRemove
         />
         )
       })}
-
-      
     </ul>
     </div>
   );
@@ -35,6 +34,6 @@ const centerTodos: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "flexStart",
-  flexDirection: "column",
+  flexDirection: "column-reverse",
   listStyleType: "none"
 };

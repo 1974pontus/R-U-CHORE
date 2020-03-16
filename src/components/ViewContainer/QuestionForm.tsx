@@ -58,7 +58,7 @@ class QuestionForm extends React.Component<Props, State> {
       this.props.onSubmit(profileData[4], this.state.name);
     }
 
-    console.log(profileData);
+    // console.log(profileData);
     /* console.log(this.state)
     //TODO: Ta reda på vem man blev
     this.props.onSubmit(profileData[0]) */
