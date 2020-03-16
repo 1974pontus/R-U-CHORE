@@ -1,6 +1,6 @@
 import React, { CSSProperties } from "react";
 
-interface titleProps {
+export interface titleProps {
   titleContent: string;
   name?: string;
 }

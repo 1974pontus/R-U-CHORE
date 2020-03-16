@@ -1,7 +1,8 @@
 import { CSSProperties } from "react"
 import steambackground from '../../img/steamBG.jpg'
-import zlatanbackground from '../../img/zlatanBG.jpg'
+import zlatanbackground from '../../img/zlatan_bg.png'
 import nerdbackground from '../../img/darth.jpg'
+import './fonts.css'
 
 
 
@@ -58,21 +59,21 @@ const profileData: ProfileData[] = [
     },
     {
         id: 'zlatan',
-        profileImg: require('../../img/zlatan.jpg'),
-        headerImg: require('../../img/milan.jpg'),
+        profileImg: require('../../img/world-cup-trophy.png'),
+        headerImg: require('../../img/zlatan_header.png'),
         alt: 'zlatanProfile',
         style: {
             height: "100%",
             fontSize: "1.2rem",
-            fontFamily: "roboto",
-            color: "pink",
+            fontFamily: 'Raleway, sans-serif',
+            color: "rgb(254, 204, 0)",
             backgroundImage: `url(${ zlatanbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           },
         titel: 'do not need a trophy to tell yourself that you are the best. ',
         initialTodos:   [
-            { text:'Du har inga todos, du ger todos', complete: true},
+            { text:'Du har inga todos, du ger ut todos', complete: true},
             
         ]
     },
