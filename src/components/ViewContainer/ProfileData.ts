@@ -40,6 +40,7 @@ const profileData: ProfileData[] = [
             backgroundImage: `url(${ mainviewbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            overflow: 'scroll'
         },
         titel: 'Svara på frågorna nedan',
         initialTodos: [],
@@ -57,6 +58,7 @@ const profileData: ProfileData[] = [
             backgroundImage: `url(${ steambackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            overflow: 'scroll'
           },
         titel: ', dina goggles är nyputsade och lädret är brunt.',
         initialTodos:   [
@@ -79,6 +81,7 @@ const profileData: ProfileData[] = [
             backgroundImage: `url(${ zlatanbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            overflow: 'scroll'
           },
         titel: ' do not need a trophy to tell yourself that you are the best.',
         initialTodos:   [
@@ -100,6 +103,7 @@ const profileData: ProfileData[] = [
             backgroundImage: `url(${ nerdbackground })`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            overflow: 'scroll'
           },
         initialTodos:   [
             { text:'Köpa Powerking', complete: false},
@@ -119,6 +123,7 @@ const profileData: ProfileData[] = [
            height: '100vh',
            color: 'black',
            textShadow: 'none',
+           overflow: 'scroll'
         },
         initialTodos: [
             { text: 'Say NO', complete: true}
