@@ -3,7 +3,7 @@ import steambackground from '../../img/steamBG.jpg'
 import zlatanbackground from '../../img/zlatanBG.jpg'
 import nerdbackground from '../../img/darth.jpg'
 import uselessbackground from '../../img/completely_useless.png'
-
+import mainviewbackground from '../../img/space.jpg'
 
 interface Todo  {
     text: string,
@@ -32,7 +32,12 @@ const profileData: ProfileData[] = [
         style: {
             fontSize: "1.2rem",
             fontFamily: 'arial',
-            height: '100%'
+            color: 'white',
+            textShadow: '0 0 3px #000000, 0 0 5px #000000',
+            height: '100%',
+            backgroundImage: `url(${ mainviewbackground })`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
         },
         titel: 'Svara på frågorna nedan',
         initialTodos: [],
