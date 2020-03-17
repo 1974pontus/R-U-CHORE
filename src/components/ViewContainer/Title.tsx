@@ -7,7 +7,11 @@ export interface titleProps {
 
 export class Title extends React.Component<titleProps> {
   render() {
-  return <h3 style={style}>{this.props.name} {this.props.titleContent}</h3>;
+    return (
+      <h3 style={style}>
+        {this.props.name} {this.props.titleContent}
+      </h3>
+    );
   }
 }
 

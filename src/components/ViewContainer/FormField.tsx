@@ -40,7 +40,7 @@ export class FormField extends React.Component<Props, State> {
 
   render() {
     return (
-      <div style={footerContainer}>
+      <div style={formFieldContainer}>
         <input
           style={inputField}
           placeholder={this.props.placeHolder}
@@ -58,20 +58,20 @@ export class FormField extends React.Component<Props, State> {
 
 export default FormField;
 
-const footerContainer: CSSProperties = {
+const formFieldContainer: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
   padding: "1rem",
-  overflowY: 'auto'
+  overflowY: "auto"
 };
 
 const inputField: CSSProperties = {
   padding: "1.1rem",
   outline: "0",
   backgroundColor: "#c7dbfa",
-  border:"none"
+  border: "none"
 };
 
 const mainButton: CSSProperties = {
