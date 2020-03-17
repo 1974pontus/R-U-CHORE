@@ -19,7 +19,6 @@ const MainView = (props: Props) => {
     <Switch>
       <Route exact path="/">
         <div style={profileData[0].style}>
-    
             <Header profile={profileData[0]} />
           <div style={style}>
           <ProfileImg profile={profileData[0]} />
@@ -27,6 +26,7 @@ const MainView = (props: Props) => {
           <QuestionForm onSubmit={props.onProfilSelected} />
         </div>
       </Route>
+     
       <Route path="/profile-view">
         <div style={props.profile.style}>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoList from "./TodoList";
 import { ToggleTodo, AddTodo, Todo } from "./types";
 import FormField from "./FormField";
@@ -36,6 +36,15 @@ const [todos, setTodos] = useState(props.profile.initialTodos);
     const newTodos: Todo[] = todos.filter((todo: Todo) => todo.text !== text)
     setTodos(newTodos)
   }
+  // useEffect(() => {
+  //   useState(todos)
+  //   //component did update
+  // }, [todos])
+
+  useEffect(() => {
+    setTodos(props.profile.initialTodos)
+    //component did update
+  }, [props.profile.initialTodos])
 
   return (
     <React.Fragment>
