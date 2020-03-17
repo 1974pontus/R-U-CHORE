@@ -5,6 +5,7 @@ import FormField from "./FormField";
 import { ProfileData } from "./ProfileData";
 import Title from "./Title";
 
+
 interface Props {
   profile: ProfileData
   name: string
