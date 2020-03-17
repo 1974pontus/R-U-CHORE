@@ -1,4 +1,4 @@
-import React, { useState, CSSProperties } from "react";
+import React, { useState, CSSProperties, useEffect } from "react";
 import MainView from "./viewContainer/MainView";
 import profileData, { ProfileData } from "./viewContainer/ProfileData";
 import { withRouter} from "react-router-dom";
@@ -13,6 +13,26 @@ const Layout = () => {
     setName(name)
   };
 
+  useEffect(() => { 
+    if(profile.id !== 'mainView' ) {
+      localStorage.setItem('profile', JSON.stringify(profile) )
+      localStorage.setItem('name', JSON.stringify(name) )
+      console.log(profile)
+    }
+
+    //component did update
+    //arrayen styr när effekten kommer att köras
+  }, [profile, name])
+
+  useEffect(() => {
+    const profile : ProfileData | null = JSON.parse(localStorage.getItem('profile') || 'null') 
+    console.log(profile)
+    setProfile(profile || profileData[0])
+   
+    setName( localStorage.getItem('name') || '')
+    //component did mount
+
+  }, [])
 
   return (
     <div style={ content }>
