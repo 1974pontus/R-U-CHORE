@@ -19,20 +19,19 @@ const MainView = (props: Props) => {
     <Switch>
       <Route exact path="/">
         <div style={profileData[0].style}>
-            <Header profile={profileData[0]} />
+          <Header profile={profileData[0]} />
           <div style={style}>
-          <ProfileImg profile={profileData[0]} />
+            <ProfileImg profile={profileData[0]} />
           </div>
           <QuestionForm onSubmit={props.onProfilSelected} />
         </div>
       </Route>
-     
+
       <Route path="/profile-view">
         <div style={props.profile.style}>
-
           <Header profile={props.profile} />
           <div style={style}>
-          <ProfileImg profile={props.profile} />
+            <ProfileImg profile={props.profile} />
           </div>
           <LinkButton />
           <ProfileView name={props.name} profile={props.profile} />
@@ -45,7 +44,7 @@ const MainView = (props: Props) => {
 };
 
 const style: CSSProperties = {
-    position: 'relative'
-}
+  position: "relative"
+};
 
 export default MainView;

@@ -5,14 +5,13 @@ import FormField from "./FormField";
 import { ProfileData } from "./ProfileData";
 import Title from "./Title";
 
-
 interface Props {
-  profile: ProfileData
-  name: string
+  profile: ProfileData;
+  name: string;
 }
 
 const ProfileView: React.FC<Props> = props => {
-const [todos, setTodos] = useState(props.profile.initialTodos);
+  const [todos, setTodos] = useState(props.profile.initialTodos);
 
   const toggleTodo: ToggleTodo = selectedTodo => {
     const newTodos = todos.map(todo => {
@@ -33,14 +32,14 @@ const [todos, setTodos] = useState(props.profile.initialTodos);
   };
 
   function handleTodoRemove(text: string) {
-    const newTodos: Todo[] = todos.filter((todo: Todo) => todo.text !== text)
-    setTodos(newTodos)
+    const newTodos: Todo[] = todos.filter((todo: Todo) => todo.text !== text);
+    setTodos(newTodos);
   }
 
   useEffect(() => {
-    setTodos(props.profile.initialTodos)
+    setTodos(props.profile.initialTodos);
     //component did update
-  }, [props.profile.initialTodos])
+  }, [props.profile.initialTodos]);
 
   return (
     <React.Fragment>
@@ -51,12 +50,11 @@ const [todos, setTodos] = useState(props.profile.initialTodos);
         placeHolder="Add your todos"
       />
 
-      <TodoList 
-        todos={todos} 
+      <TodoList
+        todos={todos}
         toggleTodo={toggleTodo}
         handleTodoRemove={handleTodoRemove}
-        />
-        
+      />
     </React.Fragment>
   );
 };

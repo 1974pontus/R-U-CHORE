@@ -1,8 +1,8 @@
 import React, { FormEvent, CSSProperties } from "react";
 import { Redirect } from "react-router-dom";
+import Title from "./Title";
 import FormField from "./FormField";
 import profileData, { ProfileData } from "./ProfileData";
-import Title from "./Title";
 
 interface Props {
   onSubmit: (profil: ProfileData, name: string) => void;
@@ -27,8 +27,9 @@ class QuestionForm extends React.Component<Props, State> {
       shouldRedirect: false
     };
   }
+
   handleOnSubmit = (e: FormEvent) => {
-    // stoppa form elemtet att uppdatera sidan automatiskt
+    //stoppar form elementet att uppdatera sidan automatiskt
     e.preventDefault();
 
     if (
@@ -37,18 +38,15 @@ class QuestionForm extends React.Component<Props, State> {
       this.state.question3 === false
     ) {
       this.props.onSubmit(profileData[1], this.state.name);
-      // hämta steampunk från databasen spara det i state.
-      //skicka state till layout och profileview.
+      // hämtar steampunk från databasen, sparar det i state.
     }
     if (this.state.question2 === true) {
       this.props.onSubmit(profileData[2], this.state.name);
-      // hämta zlatan från databasen spara det i state.
-      //skicka state till layout och profileview.
+      // hämtar zlatan från databasen, sparar det i state.
     }
     if (this.state.question2 === false && this.state.question3 === true) {
       this.props.onSubmit(profileData[3], this.state.name);
-      // hämta nerd från databasen spara det i state.
-      //skicka state till layout och profileview.
+      // hämtar nörd från databasen, sparar det i state.
     } else if (
       this.state.question1 === false &&
       this.state.question2 === false &&
@@ -58,10 +56,9 @@ class QuestionForm extends React.Component<Props, State> {
       this.props.onSubmit(profileData[4], this.state.name);
     }
 
-    // console.log(profileData);
-    /* console.log(this.state)
-    //TODO: Ta reda på vem man blev
-    this.props.onSubmit(profileData[0]) */
+    // console.log(profileData)
+    // console.log(this.state)
+
     this.setState({ shouldRedirect: true });
   };
 
