@@ -36,10 +36,6 @@ const [todos, setTodos] = useState(props.profile.initialTodos);
     const newTodos: Todo[] = todos.filter((todo: Todo) => todo.text !== text)
     setTodos(newTodos)
   }
-  // useEffect(() => {
-  //   useState(todos)
-  //   //component did update
-  // }, [todos])
 
   useEffect(() => {
     setTodos(props.profile.initialTodos)
