@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react"
+import React, { CSSProperties } from "react";
 import TodoListItem from "./TodoListItem";
 import { Todo, ToggleTodo } from "./types";
 
@@ -11,8 +11,8 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, handleTodoRemove }) => {
   return (
-    <div style={{display: "flex", justifyContent: "center"}}>
-    <ul style={centerTodos} >
+    <div style={flexCenter}>
+    <ul style={removeListType} >
       {todos.map(todo => {
         return (
         <TodoListItem 
@@ -29,11 +29,11 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, handleTodoRemove
 };
 
 
-export default TodoList
-const centerTodos: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "flexStart",
-  flexDirection: "column-reverse",
+export default TodoList;
+const removeListType: CSSProperties = {
   listStyleType: "none"
+};
+const flexCenter: CSSProperties = {
+  display: "flex",
+  justifyContent: "center"
 };
