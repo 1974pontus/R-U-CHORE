@@ -6,11 +6,15 @@ interface TodoListProps {
   todos: Array<Todo>;
   toggleTodo: ToggleTodo;
   handleTodoRemove: (text: string) => void;
-  };
+}
 
-
-const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, handleTodoRemove }) => {
+const TodoList: React.FC<TodoListProps> = ({
+  todos,
+  toggleTodo,
+  handleTodoRemove
+}) => {
   return (
+
     <div style={flexCenter}>
     <ul style={removeListType} >
       {todos.map(todo => {
@@ -23,10 +27,11 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, handleTodoRemove
         />
         )
       })}
-    </ul>
+      </ul>
     </div>
   );
 };
+
 
 
 export default TodoList;
@@ -37,3 +42,4 @@ const flexCenter: CSSProperties = {
   display: "flex",
   justifyContent: "center"
 };
+
