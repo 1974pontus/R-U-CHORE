@@ -12,7 +12,7 @@ interface State {
   value: string;
 }
 
-export class FormField extends React.Component<Props, State> {
+class FormField extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -21,6 +21,7 @@ export class FormField extends React.Component<Props, State> {
   }
 
   private updateValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // this.props.onChange && this.props.onChange(event.target.value)
     if (this.props.onChange) {
       this.props.onChange(event.target.value);
     }
@@ -75,16 +76,16 @@ const inputField: CSSProperties = {
 };
 
 const mainButton: CSSProperties = {
-  display: "flex",
-  alignItems: "end",
-  justifyContent: "end",
+  // display: "flex",
+  // alignItems: "end",
+  // justifyContent: "end",
   textAlign: "center",
-  padding: "0.3rem 0 0.3rem 1rem",
+  // padding: "0.3rem 0 0.3rem 1rem",
   background: "black",
   color: "white",
   fontSize: "0.7rem",
   width: "4rem",
-  height: "3rem",
+  height: "50.2px",
   outline: "0",
   cursor: "pointer",
   border: "none"

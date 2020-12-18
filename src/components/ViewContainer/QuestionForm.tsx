@@ -29,35 +29,34 @@ class QuestionForm extends React.Component<Props, State> {
   }
 
   handleOnSubmit = (e: FormEvent) => {
+
     //stoppar form elementet att uppdatera sidan automatiskt
+
     e.preventDefault();
 
     if (
-      this.state.question1 === true &&
-      this.state.question2 === false &&
-      this.state.question3 === false
+      this.state.question1 &&
+      !this.state.question2 && !this.state.question3
     ) {
       this.props.onSubmit(profileData[1], this.state.name);
-      // hämtar steampunk från databasen, sparar det i state.
+
+       // hämta steampunk från databasen spara det i state.
+      //skicka state till layout och profileview.
     }
-    if (this.state.question2 === true) {
+    if (this.state.question2) {
       this.props.onSubmit(profileData[2], this.state.name);
       // hämtar zlatan från databasen, sparar det i state.
     }
-    if (this.state.question2 === false && this.state.question3 === true) {
+    if (!this.state.question2 && this.state.question3) {
       this.props.onSubmit(profileData[3], this.state.name);
       // hämtar nörd från databasen, sparar det i state.
     } else if (
-      this.state.question1 === false &&
-      this.state.question2 === false &&
-      this.state.question3 === false
+      !this.state.question1 &&
+      !this.state.question2 && !this.state.question3
     ) {
-      //detta händer om man svarar nej på allt.
+      //Computer says NO
       this.props.onSubmit(profileData[4], this.state.name);
     }
-
-    // console.log(profileData)
-    // console.log(this.state)
 
     this.setState({ shouldRedirect: true });
   };

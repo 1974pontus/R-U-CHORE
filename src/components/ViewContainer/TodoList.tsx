@@ -14,28 +14,32 @@ const TodoList: React.FC<TodoListProps> = ({
   handleTodoRemove
 }) => {
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <ul style={centerTodos}>
-        {todos.map(todo => {
-          return (
-            <TodoListItem
-              key={todo.text}
-              todo={todo}
-              toggleTodo={toggleTodo}
-              handleTodoRemove={handleTodoRemove}
-            />
-          );
-        })}
+
+    <div style={flexCenter}>
+    <ul style={removeListType} >
+      {todos.map(todo => {
+        return (
+        <TodoListItem 
+          key={todo.text} 
+          todo={todo} 
+          toggleTodo={toggleTodo}
+          handleTodoRemove={handleTodoRemove} 
+        />
+        )
+      })}
       </ul>
     </div>
   );
 };
 
+
+
 export default TodoList;
-const centerTodos: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "flexStart",
-  flexDirection: "column-reverse",
+const removeListType: CSSProperties = {
   listStyleType: "none"
 };
+const flexCenter: CSSProperties = {
+  display: "flex",
+  justifyContent: "center"
+};
+
